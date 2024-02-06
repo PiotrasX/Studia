@@ -1,0 +1,328 @@
+/*
+Klasa .informacje-flex
+
+Klasa, który obejmuje wszystkie sekcje na stronie.
+
+Markup:     
+    <section class="informacje-flex">
+        <div class="info" id="info1">
+            <img class="obraz" id="obraz1" src="img/autor1.png" alt="Autor strony">
+            <div class="tekst" id="tekst1">
+                <h2 class="tytul">Witaj, jestem Piotr! <img src="img/ikonaObiektyw.png" alt="Ikona obiektyw"></h2>
+                <p class="podtytul">Odkryj ze mną tajniki robienia doskonałych zdjęć</p>
+                <p>
+                    Jestem twórcą i pasjonatem za kulisami <a href="index.html">FotoKaty.com</a>, 
+                    a także prowadzę kanał YouTube pod tą samą nazwą. Jako fotograf z wieloletnim doświadczeniem 
+                    od ponad dekady, dzielę się moją wiedzą i umiejętnościami z innymi entuzjastami fotografii.
+                </p>
+                <p>
+                    Przez lata swojej działalności, zainspirowałem i wesprzełem ponad 4000 osób w 
+                    rozwijaniu ich umiejętności w dziedzinie fotografii i obróbki zdjęć. 
+                    Moje doświadczenie przekłada się na setki artykułów i filmów, które pomogły wielu 
+                    odkryć piękno fotografii. Autorstwo kilku książek i E-booków stanowi dopełnienie mojej pasji do dzielenia się wiedzą.
+                </p>
+                <p class="zakonczenie">Zapraszam Cię do świata FotoKaty!</p>
+            </div>
+        </div>
+        <div class="info" id="info2">
+            <div class="tekst" id="tekst2">
+                <h2 class="tytul">O Akademii FotoKaty <img src="img/ikonaAparat.png" alt="Ikona aparat"></h2>
+                <p class="podtytul">Kursy Fotografii Online</p>
+                <p>
+                    Akademia FotoKaty to miejsce stworzone z myślą o entuzjastach fotografii, 
+                    którzy pragną rozwijać swoje umiejętności zarówno w zakresie robienia zdjęć, jak i ich obróbki.
+                </p>
+                <p>
+                    Tutaj odkryjesz kursy fotografii online dostosowane do różnych poziomów zaawansowania, 
+                    wyselekcjonowane presety do Lightrooma oraz specjalistyczne Master Classy 
+                    skupiające się na konkretnych aspektach fotografii.
+                </p>
+                <p>
+                    Pamiętaj, że inwestycja w rozwój własnych umiejętności to klucz do sukcesu w fotografii. 
+                    To jest znacznie ważniejsze niż nawet najbardziej zaawansowany sprzęt. 
+                    Dołącz do nas i odkryj swój potencjał w świecie fotografii z FotoKaty.
+                </p>
+            </div>
+            <img class="obraz" id="obraz2" src="img/autor2.png" alt="Autor strony">
+        </div>
+    </section>
+
+Style guide: O mnie.Wszystkie sekcje
+*/
+.informacje-flex
+{
+    box-sizing: border-box;
+    margin: 0 3em;
+    width: calc(100% - 6em);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*
+Klasa .info
+
+Klasa, który obejmuje poszczególną sekcję i jej elementy w środku.
+
+Markup:     
+    <div class="info" id="info1">
+        <img class="obraz" id="obraz1" src="img/autor1.png" alt="Autor strony">
+        <div class="tekst" id="tekst1">
+            <h2 class="tytul">Witaj, jestem Piotr! <img src="img/ikonaObiektyw.png" alt="Ikona obiektyw"></h2>
+            <p class="podtytul">Odkryj ze mną tajniki robienia doskonałych zdjęć</p>
+            <p>
+                Jestem twórcą i pasjonatem za kulisami <a href="index.html">FotoKaty.com</a>, 
+                a także prowadzę kanał YouTube pod tą samą nazwą. Jako fotograf z wieloletnim doświadczeniem 
+                od ponad dekady, dzielę się moją wiedzą i umiejętnościami z innymi entuzjastami fotografii.
+            </p>
+            <p>
+                Przez lata swojej działalności, zainspirowałem i wesprzełem ponad 4000 osób w 
+                rozwijaniu ich umiejętności w dziedzinie fotografii i obróbki zdjęć. 
+                Moje doświadczenie przekłada się na setki artykułów i filmów, które pomogły wielu 
+                odkryć piękno fotografii. Autorstwo kilku książek i E-booków stanowi dopełnienie mojej pasji do dzielenia się wiedzą.
+            </p>
+            <p class="zakonczenie">Zapraszam Cię do świata FotoKaty!</p>
+        </div>
+    </div>
+    <div class="info" id="info2">
+        <div class="tekst" id="tekst2">
+            <h2 class="tytul">O Akademii FotoKaty <img src="img/ikonaAparat.png" alt="Ikona aparat"></h2>
+            <p class="podtytul">Kursy Fotografii Online</p>
+            <p>
+                Akademia FotoKaty to miejsce stworzone z myślą o entuzjastach fotografii, 
+                którzy pragną rozwijać swoje umiejętności zarówno w zakresie robienia zdjęć, jak i ich obróbki.
+            </p>
+            <p>
+                Tutaj odkryjesz kursy fotografii online dostosowane do różnych poziomów zaawansowania, 
+                wyselekcjonowane presety do Lightrooma oraz specjalistyczne Master Classy 
+                skupiające się na konkretnych aspektach fotografii.
+            </p>
+            <p>
+                Pamiętaj, że inwestycja w rozwój własnych umiejętności to klucz do sukcesu w fotografii. 
+                To jest znacznie ważniejsze niż nawet najbardziej zaawansowany sprzęt. 
+                Dołącz do nas i odkryj swój potencjał w świecie fotografii z FotoKaty.
+            </p>
+        </div>
+        <img class="obraz" id="obraz2" src="img/autor2.png" alt="Autor strony">
+    </div>
+
+Style guide: O mnie.Wszystkie sekcje.Sekcja
+*/
+.info 
+{
+    height: auto;
+    width: calc(75% + 12.5em);
+}
+
+#info1, #info2
+{
+    margin: 3em 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#info1 
+{
+    align-self: flex-start;
+}
+
+#info2 
+{
+    align-self: flex-end;
+    margin-bottom: 2em;
+}
+
+.info > *
+{
+    flex: 1;
+    flex-basis: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+/*
+Klasa .obraz
+
+Klasa, który obejmuje obrazy w poszczególnych sekcjach.
+
+Markup:     
+    <img class="obraz" id="obraz1" src="img/autor1.png" alt="Autor strony">
+    <img class="obraz" id="obraz2" src="img/autor2.png" alt="Autor strony">
+
+Style guide: O mnie.Wszystkie sekcje.Sekcja.Obraz
+*/
+.info .obraz
+{
+    max-height: 512px;
+    object-fit: contain;
+}
+
+.info #obraz2
+{
+    margin-bottom: 1em;
+}
+
+/*
+Klasa .tekst
+
+Klasa, który obejmuje tekst w poszczególnych sekcjach.
+
+Markup:     
+    <div class="tekst" id="tekst1">
+        <h2 class="tytul">Witaj, jestem Piotr! <img src="img/ikonaObiektyw.png" alt="Ikona obiektyw"></h2>
+        <p class="podtytul">Odkryj ze mną tajniki robienia doskonałych zdjęć</p>
+        <p>
+            Jestem twórcą i pasjonatem za kulisami <a href="index.html">FotoKaty.com</a>, 
+            a także prowadzę kanał YouTube pod tą samą nazwą. Jako fotograf z wieloletnim doświadczeniem 
+            od ponad dekady, dzielę się moją wiedzą i umiejętnościami z innymi entuzjastami fotografii.
+        </p>
+        <p>
+            Przez lata swojej działalności, zainspirowałem i wesprzełem ponad 4000 osób w 
+            rozwijaniu ich umiejętności w dziedzinie fotografii i obróbki zdjęć. 
+            Moje doświadczenie przekłada się na setki artykułów i filmów, które pomogły wielu 
+            odkryć piękno fotografii. Autorstwo kilku książek i E-booków stanowi dopełnienie mojej pasji do dzielenia się wiedzą.
+        </p>
+        <p class="zakonczenie">Zapraszam Cię do świata FotoKaty!</p>
+    </div>
+    <div class="tekst" id="tekst2">
+        <h2 class="tytul">O Akademii FotoKaty <img src="img/ikonaAparat.png" alt="Ikona aparat"></h2>
+        <p class="podtytul">Kursy Fotografii Online</p>
+        <p>
+            Akademia FotoKaty to miejsce stworzone z myślą o entuzjastach fotografii, 
+            którzy pragną rozwijać swoje umiejętności zarówno w zakresie robienia zdjęć, jak i ich obróbki.
+        </p>
+        <p>
+            Tutaj odkryjesz kursy fotografii online dostosowane do różnych poziomów zaawansowania, 
+            wyselekcjonowane presety do Lightrooma oraz specjalistyczne Master Classy 
+            skupiające się na konkretnych aspektach fotografii.
+        </p>
+        <p>
+            Pamiętaj, że inwestycja w rozwój własnych umiejętności to klucz do sukcesu w fotografii. 
+            To jest znacznie ważniejsze niż nawet najbardziej zaawansowany sprzęt. 
+            Dołącz do nas i odkryj swój potencjał w świecie fotografii z FotoKaty.
+        </p>
+    </div>
+
+Style guide: O mnie.Wszystkie sekcje.Sekcja.Tekst
+*/
+.info .tekst
+{
+    width: 100%;
+    text-align: justify;
+}
+
+.info #tekst1
+{
+    padding-left: 3em;
+}
+
+.info #tekst2
+{
+    padding-right: 3em;
+}
+
+.info .tekst .tytul
+{
+    text-align: start;
+    margin-top: auto;
+    font-size: 2em;
+    color: rgb(30, 0, 255);
+}
+
+.info .tekst .tytul img
+{
+    width: 33px;
+    margin-bottom: -5px;
+}
+
+.info .tekst .podtytul
+{
+    margin-top: -1em;
+    font-size: 1.5em;
+    color: rgb(30, 0, 0);
+}
+
+.info .tekst p
+{
+    font-size: 1.125em;
+    color: rgb(60, 0, 0);
+}
+
+.info .tekst p a
+{
+    text-decoration: none;
+    padding: 0 0.125em;
+    background-color: rgb(60, 0, 0);;
+    color: white;
+}
+
+.info .tekst .zakonczenie
+{
+    font-size: 1.5em;
+    color: rgb(30, 0, 0);
+}
+
+@media screen and (min-width: 897px) and (max-width: 1200px)
+{
+    .info .obraz
+    {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 896px)
+{
+    .info 
+    {
+        width: 100%;
+    }
+
+    #info1, #info2
+    {
+        flex-direction: column;
+        row-gap: 1.5em;
+    }
+
+    .info > *
+    {
+        flex: 1;
+        flex-basis: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info #tekst1, .info #tekst2
+    {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 624px) /* 608px */
+{
+    .info .tekst .tytul
+    {
+        font-size: 1.5em;
+    }
+
+    .info .tekst .tytul img
+    {
+        width: 24px;
+        margin-bottom: -2px;
+    }
+
+    .info .tekst .podtytul
+    {
+        font-size: 1.25em;
+    }
+
+    .info .tekst p
+    {
+        font-size: 1em;
+    }
+
+    .info .tekst .zakonczenie
+    {
+        font-size: 1.25em;
+    }
+}

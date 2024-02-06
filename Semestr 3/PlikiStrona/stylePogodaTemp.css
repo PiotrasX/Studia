@@ -1,0 +1,24 @@
+.temp1 { color: rgb(0, 0, 255); }
+.temp2 { color: rgb(0, 75, 255); }
+.temp3 { color: rgb(0, 150, 255); }
+.temp4 { color: rgb(0, 225, 255); }
+.temp5 { color: rgb(0, 255, 225); }
+.temp6 { color: rgb(0, 255, 150); }
+.temp7 { color: rgb(0, 255, 75); }
+.temp8 { color: rgb(0, 255, 0); }
+.temp9 { color: rgb(75, 255, 0); }
+.temp10 { color: rgb(150, 255, 0); }
+.temp11 { color: rgb(225, 255, 0); }
+.temp12 { color: rgb(255, 225, 0); }
+.temp13 { color: rgb(255, 150, 0); }
+.temp14 { color: rgb(255, 75, 0); }
+.temp15 { color: rgb(255, 0, 0); }
+
+.tempZimne { background-color: rgba(255, 255, 255, 0.5); }
+.tempCieple { background-color: rgba(0, 0, 0, 0.5); }
+
+.komorkaData
+{
+    color: white;
+    background-color: rgb(35, 135, 235, 0.7);
+}

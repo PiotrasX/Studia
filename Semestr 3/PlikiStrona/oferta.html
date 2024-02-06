@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleOferta.css">
+    <link rel="stylesheet" href="styleDotSlides.css">
+    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="styleZlozonaAnimacja.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Fotokaty</title>
+</head>
+<body>
+    <div id="background"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                <h2>FOTOKATY</h2>
+            </div>
+
+            <div class="menu">
+                <input id="menu-chechbox" type="checkbox">
+                <label class='menu-button-label' for="menu-chechbox">
+                    <span class='menu-button'></span>
+                </label>
+                <ul class="menu-ul">
+                    <li><a class="link" href="index.html">Strona Główna</a></li>
+                    <li><a class="link" href="omnie.html">O mnie</a></li>
+                    <li><a class="link" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="link" href="sklep.html">Sklep</a></li>
+                    <li><a class="link" href="oferta.html">Oferta</a></li>
+                    <li><a class="link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Oferta</h1>
+
+        <div class="section-oferta">
+            <div class="tekst">
+                <div>
+                    <p class="tytul">
+                        <a href="#" onclick="ustawAktualnySlajd(1, 'slides-1'); return false;">Sesje portretowe <img src="img/ikonaPortret.png" alt="Ikona portretu"></a>
+                    </p>
+                    <p>
+                        <strong class="opis">Opis:</strong> Sesje portretowe są idealnymi do uwiecznienia wyjątkowych chwil życia, 
+                        takich jak sesje rodzinne, narzeczeńskie, czy indywidualne portrety. 
+                        Są też sposobem na uwiecznienie charakteru i urody modela.
+                    </p>
+                    <p>
+                        <strong class="cena">Orientacyjna cena:</strong> Sesje portretowe mogą kosztować od 250 do 550 zł, 
+                        w zależności od lokalizacji, czasu i ilości zdjęć.
+                    </p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="tytul">
+                        <a href="#" onclick="ustawAktualnySlajd(2, 'slides-1'); return false;">Sesje ślubne <img src="img/ikonaSlubna.png" alt="Ikona ślubu"></a>
+                    </p>
+                    <p>
+                        <strong class="opis">Opis:</strong> Sesje ślubne, które utrwalają jedne z najpiękniejszych chwil w życiu muszą być wyjątkowe. 
+                        Fotografowie ślubni dokumentują ceremonię, przyjęcie weselne i inne ważne momenty.
+                    </p>
+                    <p>
+                        <strong class="cena">Orientacyjna cena:</strong> Sesje ślubne mogą kosztować od 2000 do 6000 zł, w zależności od zakresu usług, 
+                        liczby fotografowanych godzin i dostarczania gotowych zdjęć.
+                    </p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="tytul">
+                        <a href="#" onclick="ustawAktualnySlajd(3, 'slides-1'); return false;">Sesje ewentowe <img src="img/ikonaEwent.png" alt="Ikona ewentu"></a>
+                    </p>
+                    <p>
+                        <strong class="opis">Opis:</strong> Fotografia ewentowa zawiera dokumentowanie różnych wydarzeń, takich jak konferencje, 
+                        koncerty, urodziny i inne specjalne okazje.
+                    </p>
+                    <p>
+                        <strong class="cena">Orientacyjna cena:</strong> Cena wachać się może od 500 zł za kilka godzin fotografowania, 
+                        aż do kilku tysięcy złotych w zależności od przebieg, wydarzenia i czasu trwania sesji.
+                    </p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="tytul">
+                        <a href="#" onclick="ustawAktualnySlajd(4, 'slides-1'); return false;">Sesje produktowe <img src="img/ikonaProdukt.png" alt="Ikona produktu"></a>
+                    </p>
+                    <p>
+                        <strong class="opis">Opis:</strong> Sesje produktów są niezbędne dla firmy, które chcą prezentować swoje produkty w atrakcyjny sposób. 
+                        To także ważna część rynku internetowego.
+                    </p>
+                    <p>
+                        <strong class="cena">Orientacyjna cena:</strong> Koszt sesji produktowej zależny od liczby produktów i ich funkcji, 
+                        ale może wynosić od 700 zł do 3000 zł i więcej.
+                    </p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="tytul">
+                        <a href="#" onclick="ustawAktualnySlajd(5, 'slides-1'); return false;">Sesje architektoniczne <img src="img/ikonaBudynek.png" alt="Ikona budynku"></a>
+                    </p>
+                    <p>
+                        <strong class="opis">Opis:</strong> Fotografowie architektoniczni specjalizują się w uwiecznianiu budynków i struktur architektonicznych. 
+                        Ich prace są często pokazywane w prasie, stronach internetowych czy telewizji.
+                    </p>
+                    <p>
+                        <strong class="cena">Orientacyjna cena:</strong> Sesje architektoniczne, których koszt może wynosić od 800 zł do 3000 zł, w zależności od zakresu projektu.
+                    </p>
+                </div>
+                
+                <hr>
+
+                <div>
+                    <p class="tytul">
+                        <a href="#" onclick="ustawAktualnySlajd(6, 'slides-1'); return false;">Sesje krajobrazowe <img src="img/ikonaLas.png" alt="Ikona lasu"></a>
+                    </p>
+                    <p>
+                        <strong class="opis">Opis:</strong> Fotografowie krajobrazowi specjalizują się w uwiecznianiu przyrody i krajobrazów. 
+                        Gotowe zdjęcia idelanie pasują jako obrazy do domu, pracy czy budynków użyteczności publicznej.
+                    </p>
+                    <p>
+                        <strong class="cena">Orientacyjna cena:</strong> Sesje krajobrazowe mogą kosztować od 900 zł do 4000 zł. Cena zależy głownie 
+                        od lokalizacji, czasu trwania i ilości zdjęć.
+                    </p>
+                </div>
+            </div>
+
+            <div class="slider-div">
+                <div class="dot-div" id="dot-div-1">
+                    <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-1')"></span>
+                    <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-1')"></span>
+                    <span class="dot" onclick="ustawAktualnySlajd(3, 'slides-1')"></span>
+                    <span class="dot" onclick="ustawAktualnySlajd(4, 'slides-1')"></span>
+                    <span class="dot" onclick="ustawAktualnySlajd(5, 'slides-1')"></span>
+                    <span class="dot" onclick="ustawAktualnySlajd(6, 'slides-1')"></span>
+                </div>
+                <div class="slides-border-container">
+                    <div class="slides" id="slides-1">
+                        <div class="div1 slides-div" id="slide-1-1">
+                            <img src="img/sesja1.png" alt="Sesja portretowa">
+                        </div>
+                        <div class="div2 slides-div" id="slide-1-2">
+                            <img src="img/sesja2.png" alt="Sesja ślubna">
+                        </div>
+                        <div class="div3 slides-div" id="slide-1-3">
+                            <img src="img/sesja3.png" alt="Sesja ewentowa">
+                        </div>
+                        <div class="div4 slides-div" id="slide-1-4">
+                            <img src="img/sesja4.png" alt="Sesja produktowa">
+                        </div>
+                        <div class="div5 slides-div" id="slide-1-5">
+                            <img src="img/sesja5.png" alt="Sesja architektoniczna">
+                        </div>
+                        <div class="div6 slides-div" id="slide-1-6">
+                            <img src="img/sesja6.png" alt="Sesja krajobrazowa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacje">
+            <p>&copy; 2024 FOTOKATY</p>
+            <p>Wszelkie prawa zastrzeżone</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/piotrasx" target=”_blank”>
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/piotrasx_/" target=”_blank”>
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@piotrasx" target=”_blank”>
+                <img src="img/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://github.com/PiotrasX" target=”_blank”>
+                <img src="img/github.png" alt="GitHub">
+            </a>
+        </div>
+
+        <div class="qia">
+            <a href="pytaniaOdpowiedzi.html">
+                <img src="img/ikonaPytaniaOdpowiedzi.png" alt="Pytania i odpowiedzi">
+            </a>
+        </div>
+    </footer>
+
+    <script src="slidesDot.js"></script>
+    <script src="czasNaStronieDataZegar.js"></script>
+    <script src="ciasteczka.js" type="module"></script>
+
+</body>
+</html>

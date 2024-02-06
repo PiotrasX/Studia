@@ -1,0 +1,188 @@
+/*
+Identyfikator #element-ozdobny
+
+Identyfikatór, który dodaje na stronę w tle element ozdobny.
+
+Markup:     
+    <div id="element-ozdobny"></div>
+
+Style guide: Portfolio.Element ozdobny
+*/
+#element-ozdobny
+{
+    position: fixed;
+    top: 11vh;
+    left: -10vw;
+    width: 125vw;
+    height: 10em;
+    transform: rotate(5deg);
+    z-index: -11;
+    background-image: url('img/ozdoba2.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    opacity: 0.19;
+}
+
+/*
+Klasa .zdjecia-grid
+
+Klasa, która obejmuje wszystkie zdjęcia dostępne na tej stronie
+
+Markup:     
+    <div class="zdjecia-grid">
+        <img class="pionowe" src="img/kwiaty1.png" alt="Bukiet kwiatów">
+        <img class="pionowe" src="img/kwiaty2.png" alt="Bukiet kwiatów">
+        <img class="pionowe" src="img/kwiaty3.png" alt="Bukiet kwiatów">
+        <img class="pionowe" src="img/kobieta1.png" alt="Kobieta">
+        <img class="pionowe" src="img/kobieta2.png" alt="Kobieta">
+        <img class="pionowe" src="img/kobieta3.png" alt="Kobieta">
+        <img class="pionowe" src="img/kobieta4.png" alt="Kobieta">
+        <img class="pionowe" src="img/kobieta5.png" alt="Kobieta">
+        <img class="pionowe" src="img/kobieta6.png" alt="Kobieta">
+        <img class="pionowe" src="img/para1.png" alt="Młoda para">
+        <img class="pionowe" src="img/para2.png" alt="Młoda para">
+        <img class="pionowe" src="img/para3.png" alt="Młoda para">
+        <img class="poziome" src="img/miasto1.png" alt="Miasto">
+        <img class="poziome" src="img/miasto2.png" alt="Miasto">
+        <img class="poziome" src="img/miasto3.png" alt="Miasto">
+        <img class="poziome" src="img/miasto4.png" alt="Miasto">
+        <img class="poziome" src="img/wies1.png" alt="Wieś">
+        <img class="poziome" src="img/wies2.png" alt="Wieś">
+    </div>
+
+Style guide: Portfolio.Zdjęcia w grid
+*/
+.zdjecia-grid
+{
+    margin: 3em;
+    margin-top: 5em;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(8, 192px);
+    column-gap: 1em;
+    row-gap: 2em;
+}
+
+/*
+Klasa .zdjecia-grid img
+
+Klasa, która obejmuje stylizowanie wszystkich zdjęć w .zdjecia-grid.
+
+Markup:     
+    <img class="pionowe" src="img/kwiaty1.png" alt="Bukiet kwiatów">
+    <img class="pionowe" src="img/kwiaty2.png" alt="Bukiet kwiatów">
+    <img class="pionowe" src="img/kwiaty3.png" alt="Bukiet kwiatów">
+    <img class="pionowe" src="img/kobieta1.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta2.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta3.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta4.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta5.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta6.png" alt="Kobieta">
+    <img class="pionowe" src="img/para1.png" alt="Młoda para">
+    <img class="pionowe" src="img/para2.png" alt="Młoda para">
+    <img class="pionowe" src="img/para3.png" alt="Młoda para">
+    <img class="poziome" src="img/miasto1.png" alt="Miasto">
+    <img class="poziome" src="img/miasto2.png" alt="Miasto">
+    <img class="poziome" src="img/miasto3.png" alt="Miasto">
+    <img class="poziome" src="img/miasto4.png" alt="Miasto">
+    <img class="poziome" src="img/wies1.png" alt="Wieś">
+    <img class="poziome" src="img/wies2.png" alt="Wieś">
+
+Style guide: Portfolio.Zdjęcia w grid.Zdjęcie
+*/
+.zdjecia-grid img
+{
+    transition: transform 500ms;
+}
+
+.zdjecia-grid img:hover
+{
+    transform: scale(1.05);
+}
+
+/*
+Klasa .pionowe
+
+Klasa, która obejmuje stylizowanie zdjęć pionowych (Wysokość > Szerokość).
+
+Markup:     
+    <img class="pionowe" src="img/kwiaty1.png" alt="Bukiet kwiatów">
+    <img class="pionowe" src="img/kwiaty2.png" alt="Bukiet kwiatów">
+    <img class="pionowe" src="img/kwiaty3.png" alt="Bukiet kwiatów">
+    <img class="pionowe" src="img/kobieta1.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta2.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta3.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta4.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta5.png" alt="Kobieta">
+    <img class="pionowe" src="img/kobieta6.png" alt="Kobieta">
+    <img class="pionowe" src="img/para1.png" alt="Młoda para">
+    <img class="pionowe" src="img/para2.png" alt="Młoda para">
+    <img class="pionowe" src="img/para3.png" alt="Młoda para">
+
+Style guide: Portfolio.Zdjęcia w grid.Zdjęcie.Pionowe
+*/
+.zdjecia-grid .pionowe
+{
+    grid-column: span 2;
+    width: 100%;
+    max-width: 384px;
+}
+
+/*
+Klasa .poziome
+
+Klasa, która obejmuje stylizowanie zdjęć pionowych (Szerokość > Wysokość).
+
+Markup:     
+    <img class="poziome" src="img/miasto1.png" alt="Miasto">
+    <img class="poziome" src="img/miasto2.png" alt="Miasto">
+    <img class="poziome" src="img/miasto3.png" alt="Miasto">
+    <img class="poziome" src="img/miasto4.png" alt="Miasto">
+    <img class="poziome" src="img/wies1.png" alt="Wieś">
+    <img class="poziome" src="img/wies2.png" alt="Wieś">
+
+Style guide: Portfolio.Zdjęcia w grid.Zdjęcie.Poziome
+*/
+.zdjecia-grid .poziome
+{
+    box-sizing: border-box;
+    padding: 0 0.5em;
+    grid-column: span 4;
+    width: 100%;
+}
+
+@media screen and (min-width: 1345px) and (max-width: 1792px)
+{
+    .zdjecia-grid 
+    {
+        grid-template-columns: repeat(6, 192px);
+    }
+
+    .zdjecia-grid .poziome
+    {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (min-width: 929px) and (max-width: 1344px)
+{
+    .zdjecia-grid 
+    {
+        grid-template-columns: repeat(4, 192px);
+    }
+}
+
+@media screen and (max-width: 928px)
+{
+    .zdjecia-grid 
+    {
+        grid-template-columns: repeat(2, minmax(64px, 192px));
+    }
+
+    .zdjecia-grid .poziome
+    {
+        grid-column: span 2;
+    }
+}

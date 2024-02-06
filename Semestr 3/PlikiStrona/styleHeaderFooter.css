@@ -1,0 +1,646 @@
+/*
+Znacznik body
+
+Znacznik określa jak strona będzie się prezentować.
+
+Markup:     
+  <body>
+  </body>
+
+Style guide: Ciało strony
+*/
+body 
+{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+h1
+{
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+}
+
+/*
+Identyfikator #background
+
+Identyfikator, który ustawia tło na stronie.
+
+Markup:     
+  <div id="background"></div>
+
+Style guide: Ciało strony.Tło
+*/
+#background
+{
+  align-items: center;
+  position: fixed;
+  min-width: calc(100vw + 4em);
+  min-height: calc(100vh + 4em);
+  background: url('img/jezioro.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(3px);
+  opacity: 0.5;
+  top: -7em;
+  left: -1em;
+  right: -1em;
+  bottom: -1em;
+  z-index: -10;
+}
+
+main
+{
+  margin-top: 9em;
+  flex-grow: 1;
+}
+
+/*
+Znacznik nav
+
+Znacznik, który reprezentuje pasek nawigacji na wszystkich
+stronach w tej witrynie.
+
+Markup:     
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+      <h2>FOTOKATY</h2>
+    </div>
+    <div class="menu">
+      <input id="menu-chechbox" type="checkbox">
+      <label class='menu-button-label' for="menu-chechbox">
+        <span class='menu-button'></span>
+      </label>
+      <ul class="menu-ul">
+        <li><a class="link" href="index.html">Strona Główna</a></li>
+        <li><a class="link" href="omnie.html">O mnie</a></li>
+        <li><a class="link" href="portfolio.html">Portfolio</a></li>
+        <li><a class="link" href="sklep.html">Sklep</a></li>
+        <li><a class="link" href="oferta.html">Oferta</a></li>
+        <li><a class="link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+Style guide: Ciało strony.Pasek nawigacji
+*/
+nav 
+{
+  padding: 0.5em 1.5em;
+  margin: 0;
+  min-height: 5em;
+  background: linear-gradient(to left, #e05c38, #188fb4);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 3em);
+}
+
+/*
+Klasa .logo
+
+Klasa określa styl dla loga strony w pasku nawigacji.
+
+Markup:     
+  <div class="logo">
+    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    <h2>FOTOKATY</h2>
+  </div>
+
+Style guide: Ciało strony.Pasek nawigacji.Logo
+*/
+.logo
+{
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  align-items: center;
+}
+
+.logo h2
+{
+  margin-left: 0.25em;
+}
+
+.logo img
+{
+  box-sizing: border-box;
+  margin-bottom: -0.25em;
+  width: 4em;
+}
+
+.logo a
+{
+  transition: transform 250ms;
+}
+
+.logo a:hover 
+{
+  transform: scale(1.1);
+}
+
+/*
+Klasa .menu
+
+Klasa, która określa styl dla elementów do przełączania
+się między różnymi stronami w witrynie.
+
+Markup:     
+  <div class="menu">
+    <input id="menu-chechbox" type="checkbox">
+    <label class='menu-button-label' for="menu-chechbox">
+      <span class='menu-button'></span>
+    </label>
+    <ul class="menu-ul">
+      <li><a class="link" href="index.html">Strona Główna</a></li>
+      <li><a class="link" href="omnie.html">O mnie</a></li>
+      <li><a class="link" href="portfolio.html">Portfolio</a></li>
+      <li><a class="link" href="sklep.html">Sklep</a></li>
+      <li><a class="link" href="oferta.html">Oferta</a></li>
+      <li><a class="link" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+
+Style guide: Ciało strony.Pasek nawigacji.Menu wyboru
+*/
+.menu a:hover 
+{
+  color: wheat;
+}
+
+/*
+Klasa .menu-ul
+
+Klasa, która zawiera listę linków w pasku nawigacji.
+
+Markup:     
+  <ul class="menu-ul">
+    <li><a class="link" href="index.html">Strona Główna</a></li>
+    <li><a class="link" href="omnie.html">O mnie</a></li>
+    <li><a class="link" href="portfolio.html">Portfolio</a></li>
+    <li><a class="link" href="sklep.html">Sklep</a></li>
+    <li><a class="link" href="oferta.html">Oferta</a></li>
+    <li><a class="link" href="kontakt.html">Kontakt</a></li>
+  </ul>
+
+Style guide: Ciało strony.Pasek nawigacji.Menu wyboru.Lista
+*/
+.menu-ul 
+{
+  padding: 0;
+  margin: 0;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+  
+.menu-ul li 
+{
+  margin: 0.25em 0 0 1em;
+  overflow: hidden;
+}
+
+/*
+Klasa .link
+
+Klasa, która obejmuje poszczególne elementy w .menu-ul.
+
+Markup:     
+  <li><a class="link" href="index.html">Strona Główna</a></li>
+  <li><a class="link" href="omnie.html">O mnie</a></li>
+  <li><a class="link" href="portfolio.html">Portfolio</a></li>
+  <li><a class="link" href="sklep.html">Sklep</a></li>
+  <li><a class="link" href="oferta.html">Oferta</a></li>
+  <li><a class="link" href="kontakt.html">Kontakt</a></li>
+
+Style guide: Ciało strony.Pasek nawigacji.Menu wyboru.Lista.Element listy
+*/
+.link
+{
+  color: white;
+  text-decoration: none;
+}
+
+/*
+Klasa .menu-button-label 
+
+Klasa, która obejmuje ikone hamburgera, gdy rozdzielczość
+ekranu jest za mała aby pomieścić wszystkie linki w pasku nawigacyjnym.
+
+Markup:     
+  <label class='menu-button-label' for="menu-chechbox">
+    <span class='menu-button'></span>
+  </label>
+
+Style guide: Ciało strony.Pasek nawigacji.Menu wyboru.Hamburger menu
+*/
+.menu-button-label 
+{
+  padding-top: 1.125em;
+  padding-bottom: 1.125em;
+  width: 1.75em;
+  height: 1.65em;
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+  
+.menu-button, .menu-button::before, .menu-button::after 
+{
+  display: block;
+  background-color: white;
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 1);
+  animation: animation-button-reverse 500ms forwards;
+}
+  
+.menu-button::before 
+{
+  margin-top: -10px;
+  content: '';
+  animation: animation-button-before-reverse 500ms forwards;
+}
+  
+.menu-button::after 
+{
+  margin-top: 10px;
+  content: '';
+  animation: animation-button-after-reverse 500ms forwards;
+}
+
+#menu-chechbox 
+{
+  display: none;
+}
+
+#menu-chechbox:checked + .menu-button-label .menu-button::before 
+{
+  animation: animation-button-before 500ms forwards;
+}
+  
+#menu-chechbox:checked + .menu-button-label .menu-button 
+{
+  animation: animation-button 500ms forwards;
+  background: rgba(255, 255, 255, 0);
+}
+  
+#menu-chechbox:checked + .menu-button-label .menu-button::after 
+{
+  animation: animation-button-after 500ms forwards;
+}
+  
+@keyframes animation-button-before
+{
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(0px, 10px) rotate(00deg); }
+  100% { transform: translate(0px, 10px) rotate(135deg); }
+}
+
+@keyframes animation-button-before-reverse
+{
+  0% { transform: translate(0px, 10px) rotate(135deg); }
+  50% { transform: translate(0px, 10px) rotate(00deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@keyframes animation-button
+{
+  0%, 49.9% { background: rgba(255, 255, 255, 1); }
+  50%, 100% { background: rgba(255, 255, 255, 0); }
+}
+
+@keyframes animation-button-reverse
+{
+  0%, 49.9% { background: rgba(255, 255, 255, 0); }
+  50%, 100% { background: rgba(255, 255, 255, 1); }
+}
+
+@keyframes animation-button-after
+{
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(0px, -10px) rotate(0deg); }
+  100% { transform: translate(0px, -10px) rotate(-135deg); }
+}
+
+@keyframes animation-button-after-reverse
+{
+  0% { transform: translate(0px, -10px) rotate(-135deg); }
+  50% { transform: translate(0px, -10px) rotate(0deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@media screen and (max-width: 896px)
+{
+  .menu-button-label 
+  {
+    display: flex;
+  }
+
+  .menu-ul 
+  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-ul > li 
+  {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+  }
+
+  #menu-chechbox ~ .menu-ul li 
+  {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    border: 0px solid rgb(50, 50, 50);
+    transition: height 550ms cubic-bezier(0.20, 1, 0.25, 1),
+                padding 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  #menu-chechbox:checked ~ .menu-ul li 
+  {
+    padding: 0.5em 0;
+    margin: 0;
+    height: 1em;
+    border: 2px solid rgb(50, 50, 50);
+    transition: height 550ms cubic-bezier(0.20, 1, 0.25, 1),
+                padding 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  #menu-chechbox:checked ~ .menu-ul li:first-child
+  {
+    border-top: 4px solid rgb(50, 50, 50);
+  }
+
+  #menu-chechbox:checked ~ .menu-ul li:last-child 
+  {
+    border-bottom: 4px solid rgb(50, 50, 50);
+  }
+}
+
+
+
+/*
+Znacznik footer
+
+Znacznik, który obejmuję stopkę wszystkich stron
+w danej witrynie.
+
+Markup:     
+  <footer>
+    <div class="informacje">
+      <p>&copy; 2024 FOTOKATY</p>
+      <p>Wszelkie prawa zastrzeżone</p>
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com/piotrasx" target=”_blank”>
+        <img src="img/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/piotrasx_/" target=”_blank”>
+        <img src="img/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@piotrasx" target=”_blank”>
+        <img src="img/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://github.com/PiotrasX" target=”_blank”>
+        <img src="img/github.png" alt="GitHub">
+      </a>
+    </div>
+    <div class="qia">
+      <a href="pytaniaOdpowiedzi.html">
+        <img src="img/ikonaPytaniaOdpowiedzi.png" alt="Pytania i odpowiedzi">
+      </a>
+    </div>
+  </footer>
+
+Style guide: Ciało strony.Stopka
+*/
+footer 
+{
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.5em 1em 0 1em;
+  margin-top: 3em;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgb(33, 33, 33);
+}
+
+/*
+Klasa .informacje
+
+Klasa, która określa styl dla tekstu z informacjami.
+
+Markup:     
+  <div class="informacje">
+    <p>&copy; 2024 FOTOKATY</p>
+    <p>Wszelkie prawa zastrzeżone</p>
+  </div>
+
+Style guide: Ciało strony.Stopka.Informacje
+*/
+.informacje p
+{
+  padding-left: calc(1em - 1px);
+  padding-right: calc(1em - 2px);
+  margin: 0.25em;
+}
+
+/*
+Klasa .social-media 
+
+Klasa, która określa styl ikon z przekierowaniem
+do różnych social mediów.
+
+Markup:     
+  <div class="social-media">
+    <a href="https://www.facebook.com/piotrasx" target=”_blank”>
+      <img src="img/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/piotrasx_/" target=”_blank”>
+      <img src="img/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@piotrasx" target=”_blank”>
+      <img src="img/tiktok.png" alt="TikTok">
+    </a>
+    <a href="https://github.com/PiotrasX" target=”_blank”>
+      <img src="img/github.png" alt="GitHub">
+    </a>
+  </div>
+
+Style guide: Ciało strony.Stopka.Social media
+*/
+.social-media 
+{
+  margin: 1.5em 2em;
+  row-gap: 1.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media img 
+{
+  width: 3em;
+  margin-bottom: -3px;
+}
+
+.social-media a 
+{
+  text-decoration: none;
+  margin: 0 1em;
+  transition: transform 250ms;
+}
+
+.social-media a:hover 
+{
+  transform: scale(1.15);
+}
+
+/*
+Klasa .qia
+
+Klasa, która zawiera link do strony z pytaniami
+i odpowiedziami.
+
+Markup:     
+  <div class="qia">
+    <a href="pytaniaOdpowiedzi.html">
+      <img src="img/ikonaPytaniaOdpowiedzi.png" alt="Pytania i odpowiedzi">
+    </a>
+  </div>
+
+Style guide: Ciało strony.Stopka.Q&A
+*/
+.qia
+{
+  position: absolute;
+  top: 1em;
+  bottom: auto;
+  right: 1em;
+}
+
+.qia img
+{
+  height: 3.5em;
+  margin-bottom: -3px;
+}
+
+.qia img
+{
+  text-decoration: none;
+  transition: transform 250ms;
+}
+
+.qia img:hover 
+{
+  transform: scale(1.15);
+}
+
+@media screen and (max-width: 432px) 
+{
+  .social-media
+  {
+    margin: 1.5em calc(2.5em + 1px);
+  }
+
+  .qia
+  {
+    top: auto;
+    bottom: 1.25em;
+    right: 1em;
+  }
+}
+
+@media screen and (max-width: 400px) 
+{
+  .social-media
+  {
+    margin: 1.5em 2.5em;
+  }
+}
+
+@media screen and (max-width: 368px) 
+{
+  .social-media
+  {
+    margin: 1.5em 2em;
+  }
+}
+
+@media screen and (max-width: 352px) 
+{
+  footer
+  {
+    padding-bottom: 4.5em;
+  }
+
+  .social-media
+  {
+    margin: 1.5em calc(2.5em + 1px);
+  }
+
+  .qia
+  {
+    top: auto;
+    bottom: 1.25em;
+    right: calc(50% - 2em);
+  }
+}
+
+@media screen and (max-width: 320px) 
+{
+  .social-media
+  {
+    margin: 1.5em 1.5em;
+  }
+}
+
+@media screen and (max-width: 256px) 
+{
+  .social-media
+  {
+    margin: 1.5em 1em;
+  }
+}

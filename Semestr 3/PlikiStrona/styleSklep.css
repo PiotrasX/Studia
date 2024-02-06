@@ -1,0 +1,657 @@
+hr
+{
+    width: calc(100% - 12em);
+    margin-top: 5em;
+    margin-bottom: 3em;
+    border: 2.5px solid black;
+    border-radius: 50px;
+}
+
+#slider-end
+{
+    margin-bottom: 1.5em;
+}
+
+/*
+Klasa .slider-section
+
+Klasa, która obejmuje całe sekcje z elementami w środku.
+Elementy w środku to bloki zawierająca tytuł sekcji, tekst opisujący sekcje,
+niektóre sekcje zawierają również kropki do nawigacji i kontenery to przesuwania.
+
+Markup:     
+    <section class="slider-section">
+        <h2 class="zakladka-h2">Moje kursy</h2>
+        <span class="zakladka-span">
+            W tej zakładce znajdziesz kolekcję kursów online mojego autorstwa. Tutaj znajdziesz 
+            szkolenia, które pomogą Ci rozwijać Twoje umiejętności i pasje. Od podstawowego kursu 
+            fotografii, po zaawansowane techniki w Photoshopie, wszystko to zostało przygotowane, 
+            aby zaspokoić różnorodne potrzeby zarówno początkujących, jak i zaawansowanych 
+            entuzjastów. Każdy kurs jest starannie opracowany i zapewnia dostęp do bogatych 
+            zasobów edukacyjnych, w tym lekcji wideo, poradników i praktycznych ćwiczeń. 
+            Jest to Twoja brama do nauki i doskonalenia umiejętności w wygodny i elastyczny 
+            sposób, dostosowany do Twojego tempa życia i preferencji. Zapraszam do odkrycia 
+            i zanurzenia się w świecie wiedzy, dostępnej na wyciągnięcie ręki.
+        </span>
+        <div class="dot-div" id="dot-div-1">
+            <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-1')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-1')"></span>
+        </div>
+        <div class="slides-border-container">
+            <div class="slides" id="slides-1">
+                <div class="div1 slides-div" id="slide-1-1">
+                    <div class="obraz">
+                        <img src="img/kurs1.jpg" alt="Kurs photoshop">
+                    </div>
+                    <div class="tekst">
+                        <h2 class="tytul">"Kurs Photoshop"</h2>
+                        <p class="podtytul">Opanuj sztukę edycji i transformacji obrazów cyfrowych!</p>
+                        <p>
+                            Ten kurs to kompleksowe i praktyczne szkolenie online, zaprojektowane z myślą 
+                            o osobach chcących opanować ten potężny program do edycji i obróbki graficznej. 
+                            Niezależnie od tego, czy jesteś początkującym użytkownikiem, czy aspirującym 
+                            grafikiem, ten kurs przeprowadzi Cię krok po kroku przez wszystkie niezbędne 
+                            narzędzia i techniki, które są kluczowe w pracy z Photoshopem. 
+                        </p>
+                        <p>
+                            Zawiera on serię łatwych do zrozumienia lekcji wideo, które pokazują, 
+                            jak wykonywać podstawowe operacje, takie jak retuszowanie zdjęć, 
+                            tworzenie kompozycji czy efekty specjalne, a także bardziej zaawansowane funkcje, 
+                            takie jak praca z warstwami, maskami i filtrami. Dodatkowo, w kursie znajdziesz 
+                            praktyczne ćwiczenia i projekty, które pozwolą Ci utrwalić zdobytą wiedzę. 
+                        </p>
+                        <p>
+                            "Kurs Photoshop" to idealny sposób na szybkie i efektywne nauczenie się korzystania 
+                            z tego programu, otwierając drzwi do świata profesjonalnej grafiki cyfrowej.
+                        </p>
+                    </div>
+                </div>
+                <div class="div2 slides-div" id="slide-1-2">
+                    <div class="obraz">
+                        <img src="img/kurs2.jpg" alt="Kurs podstaw fotografii">
+                    </div>
+                    <div class="tekst">
+                        <h2 class="tytul">"Kurs Podstaw Fotografii"</h2>
+                        <p class="podtytul">Twój pierwszy krok w świat tworzenia niezapomnianych zdjęć!</p>
+                        <p>
+                            Ten kurs to idealny start dla każdego, kto chce wkroczyć w fascynujący świat 
+                            fotografii. Ten kurs online został stworzony z myślą o początkujących, 
+                            zapewniając kompleksowe wprowadzenie do wszystkich kluczowych aspektów fotografii. 
+                            Od poznawania swojego aparatu, przez zrozumienie podstawowych zasad kompozycji, 
+                            aż po naukę oświetlenia i ekspozycji, wszystko zostało zaprojektowane tak, 
+                            aby uczynić naukę prosta i przystępną.
+                        </p>
+                        <p>
+                            Zajęcia są podzielone na łatwe do przyswojenia moduły, które krok po kroku 
+                            wprowadzą Cię w tajniki robienia pięknych zdjęć. Dodatkowo, kurs zawiera szereg 
+                            praktycznych ćwiczeń, które pomogą Ci zastosować zdobytą wiedzę w praktyce. 
+                            Niezależnie od tego, czy Twoim celem jest robienie lepszych zdjęć rodzinnych, 
+                            czy rozwijanie hobbystycznej pasji, "Kurs Podstaw Fotografii" zapewni Ci solidne 
+                            fundamenty, na których będziesz mógł budować swoje umiejętności. To Twoja szansa, 
+                            by odkryć radość płynącą z tworzenia pięknych obrazów!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section">
+        <h2 class="zakladka-h2">Moje publikacje</h2>
+        <span class="zakladka-span">
+            Tutaj znajdziesz książki i audiobook mojego autorstwa. Pozycje na tej liście 
+            pomogą Ci rozwinąć Twoje umiejętności i wiedzę. Wszystkie te zasoby zostały 
+            stworzone z myślą o rozwijaniu Twojej pasji do fotografii. Jest to miejsce, 
+            gdzie każdy miłośnik fotografii znajdzie coś dla siebie, niezależnie od poziomu 
+            zaawansowania. Zapraszam do odkrywania, uczenia się i czerpania inspiracji z moich prac!
+        </span>
+        <div class="dot-div" id="dot-div-2">
+            <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-2')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-2')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(3, 'slides-2')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(4, 'slides-2')"></span>
+        </div>
+        <div class="slides-border-container">
+            <div class="slides" id="slides-2">
+                <div class="div1 slides-div" id="slide-2-1">
+                    <div class="obraz">
+                        <img src="img/ksiazka1.png" alt="Książka">
+                    </div>
+                    <div class="tekst">
+                        <h2 class="tytul">Książka "Istotne w Fotografii"</h2>
+                        <p class="podtytul">Twój przewodnik do tworzenia wyjątkowych zdjęć!</p>
+                        <p>
+                            Jest to niezbędna lektura dla każdego, kto pragnie zgłębić tajniki 
+                            sztuki fotograficznej. Łącząc teorię z praktycznymi poradami, 
+                            książka otwiera drzwi do świata obrazowania, podkreślając zarówno 
+                            techniczne aspekty fotografii, jak i jej artystyczne niuanse.
+                            Od kompozycji po obróbkę zdjęć, ta publikacja jest skarbnicą wiedzy, 
+                            inspiracji oraz kreatywnych metod, idealna zarówno dla początkujących, 
+                            jak i zaawansowanych fotografów.
+                        </p>
+                        <p>
+                            "Istotne w Fotografii" to klucz do odkrycia własnego, 
+                            unikalnego stylu w świecie pełnym obrazów.
+                        </p>
+                    </div>
+                </div>
+                <div class="div2 slides-div" id="slide-2-2">
+                    <div class="obraz">
+                        <img src="img/ksiazka2.png" alt="Książka">
+                    </div>
+                    <div class="tekst">
+                        <h2 class="tytul">Książka "Odblokuj Fotografię Cyfrową"</h2>
+                        <p class="podtytul">Przełam bariery kreatywności!</p>
+                        <p>
+                            Jest to rewolucyjny przewodnik dla każdego, kto chce opanować 
+                            sztukę cyfrowego obrazowania. Ta książka jest skarbnicą praktycznych 
+                            wskazówek i profesjonalnych technik, które umożliwią czytelnikom 
+                            pełne wykorzystanie potencjału ich aparatu cyfrowego. Od podstaw 
+                            obsługi sprzętu, przez zaawansowane techniki obróbki, aż po sekrety 
+                            tworzenia porywających kompozycji.
+                        </p>
+                        <p>
+                            Ta publikacja to kompleksowe źródło wiedzy. Niezależnie od tego, 
+                            czy jesteś hobbystą, czy zawodowcem, "Odblokuj Fotografię Cyfrową" 
+                            otworzy przed Tobą nowe horyzonty w dziedzinie fotografii, 
+                            ucząc jak tworzyć zachwycające obrazy z cyfrowym wdziękiem.
+                        </p>
+                    </div>
+                </div>
+                <div class="div3 slides-div" id="slide-2-3">
+                    <div class="obraz">
+                        <img src="img/ksiazka3.png" alt="Książka">
+                    </div>
+                    <div class="tekst">
+                        <h2 class="tytul">Książka "Zaawansowane Techniki Fotograficzne"</h2>
+                        <p class="podtytul">Przekrocz poziom mistrzostwa!</p>
+                        <p>
+                            Jest to esencjonalna lektura dla zaawansowanych fotografów dążących 
+                            do mistrzostwa w swoim rzemiośle. Ta dogłębna książka przenosi 
+                            czytelników wiedzę poza podstawy fotografii, wprowadzając ich w świat 
+                            zaawansowanych technik i metod, które odmienią ich sposób postrzegania 
+                            i utrwalania rzeczywistości. Znajdziesz tu szczegółowe omówienia takich 
+                            tematów jak długie ekspozycje, wyszukana obróbka cyfrowa z wykorzystaniem
+                            sztucznej inteligencji, techniki oświetleniowe czy makrofotografia. 
+                        </p>
+                        <p>
+                            Każdy rozdział to połączenie teorii z praktycznymi przykładami, co czyni 
+                            tę książkę nie tylko bogatym źródłem wiedzy, ale również inspiracją do 
+                            eksperymentowania i przekraczania własnych granic w fotografii. 
+                        </p>
+                        <p>
+                            "Zaawansowane Techniki Fotograficzne" to klucz do odkrycia nowych, 
+                            kreatywnych ścieżek w fascynującym świecie fotografii.
+                        </p>
+                    </div>
+                </div> 
+                <div class="div4 slides-div" id="slide-2-4">
+                    <div class="obraz">
+                        <img src="img/audiobook1.png" alt="Audiobook">
+                    </div>
+                    <div class="tekst">
+                        <h2 class="tytul">Audiobook "Techniki Fotograficzne"</h2>
+                        <p class="podtytul">Dla osób w ciągłym biegu!</p>
+                        <p>
+                            Jeśli masz mało czasu, lub ciągle masz wymówki do nauki
+                            fotografi, to ta pozycja jest doskonałym wyborem dla 
+                            ciebie. Dzięki tej pozycji rozwiniesz swoje umiejętności 
+                            fotograficzne w dynamiczny i wygodny sposób. Ten audiobook, 
+                            idealny do słuchania w trakcie jazdy samochodem, wykonywania 
+                            codziennych obowiązków domowych czy nawet podczas relaksującego 
+                            spaceru, oferuje elastyczność nauki dopasowaną do Twojego 
+                            zajętego trybu życia. Zawiera szereg wskazówek i technik, 
+                            od podstawowych po zaawansowane, przekazanych w przystępny 
+                            i zrozumiały sposób. 
+                        </p>
+                        <p>
+                            Niezależnie od tego, czy jesteś początkującym entuzjastą, 
+                            czy doświadczonym fotografem, ten audiobook pozwoli Ci zagłębić 
+                            się w tajniki fotografii, nie przerywając Twojej codziennej rutyny. 
+                        </p>
+                        <p>
+                            "Kurs Audio Dotyczący Technik Fotograficznych" to idealne rozwiązanie, 
+                            aby rozwijać pasję do fotografii, gdziekolwiek jesteś i cokolwiek robisz.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="slider-section" id="slider-end">
+        <h2 class="zakladka-h2">Zainteresowany moją ofertą?</h2>
+        <span class="zakladka-span">
+            Jeśli jesteś zainteresowany/a moją ofertą i chcesz dowiedzieć się więcej na temat
+            produktów, lub chcesz zakupić jakiś produkt, serdecznie zapraszam do skorzystania 
+            z <a href="kontakt.html#formularz-kontaktowy">formularza kontaktowego</a>.
+            Chętnie odpowiem na wszystkie Twoje zapytania. Skontaktuj się ze mną, 
+            a postaram się odpowiedzieć jak najszybciej. Czekam na Twój kontakt!
+        </span>
+    </section>
+
+Style guide: Sklep.Slider sekcja
+*/
+.slider-section 
+{
+    margin: 3em auto;
+    margin-top: 5em;
+    box-sizing: border-box;
+    position: relative;
+    width: calc(100% - 6em);
+    overflow: hidden;
+}
+
+/*
+Klasa .zakladka-h2
+
+Klasa, która obejmuje tytuł danej sekcji.
+
+Markup:     
+    <h2 class="zakladka-h2">Moje kursy</h2>
+    <h2 class="zakladka-h2">Moje publikacje</h2>
+    <h2 class="zakladka-h2">Zainteresowany moją ofertą?</h2>
+
+Style guide: Sklep.Slider sekcja.Tytuł sekcji
+*/
+.slider-section .zakladka-h2
+{
+    margin: auto;
+    font-size: 2.25em;
+    color: rgb(0, 75, 15);
+}
+
+/*
+Klasa .zakladka-span
+
+Klasa, która obejmuje opis danej sekcji.
+
+Markup:     
+    <span class="zakladka-span">
+        W tej zakładce znajdziesz kolekcję kursów online mojego autorstwa. Tutaj znajdziesz 
+        szkolenia, które pomogą Ci rozwijać Twoje umiejętności i pasje. Od podstawowego kursu 
+        fotografii, po zaawansowane techniki w Photoshopie, wszystko to zostało przygotowane, 
+        aby zaspokoić różnorodne potrzeby zarówno początkujących, jak i zaawansowanych 
+        entuzjastów. Każdy kurs jest starannie opracowany i zapewnia dostęp do bogatych 
+        zasobów edukacyjnych, w tym lekcji wideo, poradników i praktycznych ćwiczeń. 
+        Jest to Twoja brama do nauki i doskonalenia umiejętności w wygodny i elastyczny 
+        sposób, dostosowany do Twojego tempa życia i preferencji. Zapraszam do odkrycia 
+        i zanurzenia się w świecie wiedzy, dostępnej na wyciągnięcie ręki.
+    </span>
+    <span class="zakladka-span">
+        Tutaj znajdziesz książki i audiobook mojego autorstwa. Pozycje na tej liście 
+        pomogą Ci rozwinąć Twoje umiejętności i wiedzę. Wszystkie te zasoby zostały 
+        stworzone z myślą o rozwijaniu Twojej pasji do fotografii. Jest to miejsce, 
+        gdzie każdy miłośnik fotografii znajdzie coś dla siebie, niezależnie od poziomu 
+        zaawansowania. Zapraszam do odkrywania, uczenia się i czerpania inspiracji z moich prac!
+    </span>
+    <span class="zakladka-span">
+        Jeśli jesteś zainteresowany/a moją ofertą i chcesz dowiedzieć się więcej na temat
+        produktów, lub chcesz zakupić jakiś produkt, serdecznie zapraszam do skorzystania 
+        z <a href="kontakt.html#formularz-kontaktowy">formularza kontaktowego</a>.
+        Chętnie odpowiem na wszystkie Twoje zapytania. Skontaktuj się ze mną, 
+        a postaram się odpowiedzieć jak najszybciej. Czekam na Twój kontakt!
+    </span>
+
+Style guide: Sklep.Slider sekcja.Opis sekcji
+*/
+.slider-section .zakladka-span
+{
+    display: inline-block;
+    width: 85%;
+    font-size: 1.125em;
+    color: rgb(5, 50, 25);
+}
+
+.slider-section .zakladka-span a
+{
+    text-decoration: none;
+    padding: 0 0.125em;
+    background-color: rgb(60, 0, 0);;
+    color: white;
+}
+
+.slider-section span
+{
+    display: flex;
+    margin: 1em auto;
+    text-align: center;
+    justify-content: center;
+}
+
+/*
+Klasa .slides-border-container
+
+Klasa, która obejmuje zestaw kontenerów, które posiadają animacje slidera.
+
+Markup:     
+    <div class="slides-border-container">
+        <div class="slides" id="slides-1">
+            <div class="div1 slides-div" id="slide-1-1">
+                <div class="obraz">
+                    <img src="img/kurs1.jpg" alt="Kurs photoshop">
+                </div>
+                <div class="tekst">
+                    <h2 class="tytul">"Kurs Photoshop"</h2>
+                    <p class="podtytul">Opanuj sztukę edycji i transformacji obrazów cyfrowych!</p>
+                    <p>
+                        Ten kurs to kompleksowe i praktyczne szkolenie online, zaprojektowane z myślą 
+                        o osobach chcących opanować ten potężny program do edycji i obróbki graficznej. 
+                        Niezależnie od tego, czy jesteś początkującym użytkownikiem, czy aspirującym 
+                        grafikiem, ten kurs przeprowadzi Cię krok po kroku przez wszystkie niezbędne 
+                        narzędzia i techniki, które są kluczowe w pracy z Photoshopem. 
+                    </p>
+                    <p>
+                        Zawiera on serię łatwych do zrozumienia lekcji wideo, które pokazują, 
+                        jak wykonywać podstawowe operacje, takie jak retuszowanie zdjęć, 
+                        tworzenie kompozycji czy efekty specjalne, a także bardziej zaawansowane funkcje, 
+                        takie jak praca z warstwami, maskami i filtrami. Dodatkowo, w kursie znajdziesz 
+                        praktyczne ćwiczenia i projekty, które pozwolą Ci utrwalić zdobytą wiedzę. 
+                    </p>
+                    <p>
+                        "Kurs Photoshop" to idealny sposób na szybkie i efektywne nauczenie się korzystania 
+                        z tego programu, otwierając drzwi do świata profesjonalnej grafiki cyfrowej.
+                    </p>
+                </div>
+            </div>
+            <div class="div2 slides-div" id="slide-1-2">
+                <div class="obraz">
+                    <img src="img/kurs2.jpg" alt="Kurs podstaw fotografii">
+                </div>
+                <div class="tekst">
+                    <h2 class="tytul">"Kurs Podstaw Fotografii"</h2>
+                    <p class="podtytul">Twój pierwszy krok w świat tworzenia niezapomnianych zdjęć!</p>
+                    <p>
+                        Ten kurs to idealny start dla każdego, kto chce wkroczyć w fascynujący świat 
+                        fotografii. Ten kurs online został stworzony z myślą o początkujących, 
+                        zapewniając kompleksowe wprowadzenie do wszystkich kluczowych aspektów fotografii. 
+                        Od poznawania swojego aparatu, przez zrozumienie podstawowych zasad kompozycji, 
+                        aż po naukę oświetlenia i ekspozycji, wszystko zostało zaprojektowane tak, 
+                        aby uczynić naukę prosta i przystępną.
+                    </p>
+                    <p>
+                        Zajęcia są podzielone na łatwe do przyswojenia moduły, które krok po kroku 
+                        wprowadzą Cię w tajniki robienia pięknych zdjęć. Dodatkowo, kurs zawiera szereg 
+                        praktycznych ćwiczeń, które pomogą Ci zastosować zdobytą wiedzę w praktyce. 
+                        Niezależnie od tego, czy Twoim celem jest robienie lepszych zdjęć rodzinnych, 
+                        czy rozwijanie hobbystycznej pasji, "Kurs Podstaw Fotografii" zapewni Ci solidne 
+                        fundamenty, na których będziesz mógł budować swoje umiejętności. To Twoja szansa, 
+                        by odkryć radość płynącą z tworzenia pięknych obrazów!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+Style guide: Sklep.Slider sekcja.Slider kontenery duże z slidesami
+*/
+.slider-section .slides-border-container 
+{
+    overflow: hidden;
+    border-radius: 2em;
+    width: 100%;
+}
+
+.slider-section .slides 
+{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    width: calc(100% - 6px - 1em);
+    column-gap: 7em;
+}
+
+/*
+Klasa .slides-div
+
+Klasa, która obejmuje konkretne kontenery,
+które posiadają animacje slidera.
+
+Markup:     
+    <div class="div1 slides-div" id="slide-1-1">
+        <div class="obraz">
+            <img src="img/kurs1.jpg" alt="Kurs photoshop">
+        </div>
+        <div class="tekst">
+            <h2 class="tytul">"Kurs Photoshop"</h2>
+            <p class="podtytul">Opanuj sztukę edycji i transformacji obrazów cyfrowych!</p>
+            <p>
+                Ten kurs to kompleksowe i praktyczne szkolenie online, zaprojektowane z myślą 
+                o osobach chcących opanować ten potężny program do edycji i obróbki graficznej. 
+                Niezależnie od tego, czy jesteś początkującym użytkownikiem, czy aspirującym 
+                grafikiem, ten kurs przeprowadzi Cię krok po kroku przez wszystkie niezbędne 
+                narzędzia i techniki, które są kluczowe w pracy z Photoshopem. 
+            </p>
+            <p>
+                Zawiera on serię łatwych do zrozumienia lekcji wideo, które pokazują, 
+                jak wykonywać podstawowe operacje, takie jak retuszowanie zdjęć, 
+                tworzenie kompozycji czy efekty specjalne, a także bardziej zaawansowane funkcje, 
+                takie jak praca z warstwami, maskami i filtrami. Dodatkowo, w kursie znajdziesz 
+                praktyczne ćwiczenia i projekty, które pozwolą Ci utrwalić zdobytą wiedzę. 
+            </p>
+            <p>
+                "Kurs Photoshop" to idealny sposób na szybkie i efektywne nauczenie się korzystania 
+                z tego programu, otwierając drzwi do świata profesjonalnej grafiki cyfrowej.
+            </p>
+        </div>
+    </div>
+    <div class="div2 slides-div" id="slide-1-2">
+        <div class="obraz">
+            <img src="img/kurs2.jpg" alt="Kurs podstaw fotografii">
+        </div>
+        <div class="tekst">
+            <h2 class="tytul">"Kurs Podstaw Fotografii"</h2>
+            <p class="podtytul">Twój pierwszy krok w świat tworzenia niezapomnianych zdjęć!</p>
+            <p>
+                Ten kurs to idealny start dla każdego, kto chce wkroczyć w fascynujący świat 
+                fotografii. Ten kurs online został stworzony z myślą o początkujących, 
+                zapewniając kompleksowe wprowadzenie do wszystkich kluczowych aspektów fotografii. 
+                Od poznawania swojego aparatu, przez zrozumienie podstawowych zasad kompozycji, 
+                aż po naukę oświetlenia i ekspozycji, wszystko zostało zaprojektowane tak, 
+                aby uczynić naukę prosta i przystępną.
+            </p>
+            <p>
+                Zajęcia są podzielone na łatwe do przyswojenia moduły, które krok po kroku 
+                wprowadzą Cię w tajniki robienia pięknych zdjęć. Dodatkowo, kurs zawiera szereg 
+                praktycznych ćwiczeń, które pomogą Ci zastosować zdobytą wiedzę w praktyce. 
+                Niezależnie od tego, czy Twoim celem jest robienie lepszych zdjęć rodzinnych, 
+                czy rozwijanie hobbystycznej pasji, "Kurs Podstaw Fotografii" zapewni Ci solidne 
+                fundamenty, na których będziesz mógł budować swoje umiejętności. To Twoja szansa, 
+                by odkryć radość płynącą z tworzenia pięknych obrazów!
+            </p>
+        </div>
+    </div>
+
+Style guide: Sklep.Slider sekcja.Slides pojedyncze kontenery
+*/
+.slides-div
+{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 1em 0 0 1em;
+    border-radius: 2em;
+    border: 3px solid rgb(33, 33, 33);
+    background-color: rgb(50, 50, 50, 0.35);
+}
+
+.slides-div > *
+{
+    box-sizing: border-box;
+    flex: 1;
+    flex-basis: 50%;
+    max-width: 50%;
+    border-radius: 2em;
+}
+
+/*
+Klasa .obraz
+
+Klasa, która obejmuje obrazy wewnątrz kontenerów .slides-div.
+
+Markup:     
+    <div class="obraz">
+        <img src="img/kurs1.jpg" alt="Kurs photoshop">
+    </div>
+    <div class="obraz">
+        <img src="img/kurs2.jpg" alt="Kurs podstaw fotografii">
+    </div>
+
+Style guide: Sklep.Slider sekcja.Slides pojedyncze kontenery.Obraz
+*/
+.slides-div .obraz
+{
+    padding-bottom: 1em;
+    width: 100%;
+    flex-shrink: 1;
+    align-self: flex-start;
+}
+
+.slides-div .obraz img
+{
+    width: 100%;
+    max-width: 512px;
+    height: auto;
+    border-radius: 2em;
+    object-fit: contain;
+    flex-shrink: 1;
+}
+
+/*
+Klasa .tekst
+
+Klasa, która obejmuje tekst wewnątrz kontenerów .slides-div.
+
+Markup:     
+    <div class="tekst">
+        <h2 class="tytul">"Kurs Photoshop"</h2>
+        <p class="podtytul">Opanuj sztukę edycji i transformacji obrazów cyfrowych!</p>
+        <p>
+            Ten kurs to kompleksowe i praktyczne szkolenie online, zaprojektowane z myślą 
+            o osobach chcących opanować ten potężny program do edycji i obróbki graficznej. 
+            Niezależnie od tego, czy jesteś początkującym użytkownikiem, czy aspirującym 
+            grafikiem, ten kurs przeprowadzi Cię krok po kroku przez wszystkie niezbędne 
+            narzędzia i techniki, które są kluczowe w pracy z Photoshopem. 
+        </p>
+        <p>
+            Zawiera on serię łatwych do zrozumienia lekcji wideo, które pokazują, 
+            jak wykonywać podstawowe operacje, takie jak retuszowanie zdjęć, 
+            tworzenie kompozycji czy efekty specjalne, a także bardziej zaawansowane funkcje, 
+            takie jak praca z warstwami, maskami i filtrami. Dodatkowo, w kursie znajdziesz 
+            praktyczne ćwiczenia i projekty, które pozwolą Ci utrwalić zdobytą wiedzę. 
+        </p>
+        <p>
+            "Kurs Photoshop" to idealny sposób na szybkie i efektywne nauczenie się korzystania 
+            z tego programu, otwierając drzwi do świata profesjonalnej grafiki cyfrowej.
+        </p>
+    </div>
+
+Style guide: Sklep.Slider sekcja.Slides pojedyncze kontenery.Tekst
+*/
+.slides-div .tekst
+{
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    padding-left: 3em;
+    padding-right: 1em;
+    align-self: flex-start;
+}
+
+.slides-div .tekst .tytul
+{
+    text-align: start;
+    margin-top: auto;
+    line-height: 1;
+    font-size: 2em;
+    color: rgb(65, 0, 150);
+}
+
+.slides-div .tekst .podtytul
+{
+    margin-top: -0.5em;
+    font-size: 1.5em;
+    color: rgb(45, 5, 55);
+}
+
+.slides-div .tekst p
+{
+    font-size: 1.125em;
+    color: rgb(70, 10, 10);
+}
+
+.slides-div .tekst p a
+{
+    text-decoration: none;
+    padding: 0 0.125em;
+    background-color: rgb(70, 10, 10);
+    color: white;
+}
+
+@media screen and (max-width: 896px)
+{
+    .slider-section .zakladka-span
+    {
+        width: 90%;
+    }
+
+    .slider-section .slides
+    {
+        width: calc(100% - 6px);
+    }
+
+    .slides-div 
+    {
+        width: 100%;
+        flex-direction: column;
+        row-gap: 1.5em;
+        padding: 0;
+    }
+
+    .slides-div > *
+    {
+        flex: 1;
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 1em 1em;
+    }
+
+    .slides-div .tekst
+    {
+        margin-top: -1.5em;
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: 662px) /* 646px */
+{
+    .slider-section .zakladka-h2
+    {
+        font-size: 2em;
+    }
+    
+    .slider-section .zakladka-span
+    {
+        font-size: 1.0625em;
+    }
+
+    .slides-div .tekst .tytul
+    {
+        font-size: 1.5em;
+    }
+
+    .slides-div .tekst .podtytul
+    {
+        font-size: 1.25em;
+    }
+
+    .slides-div .tekst p
+    {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,535 @@
+/*
+Klasa .kontakt-flex 
+
+Klasa, która obejmuje poszczególne sekcje na stronie.
+
+Markup:     
+    <section class="kontakt-flex">
+        <div class="info" id="info1">
+            <div class="tekst" id="tekst1">
+                <h2 class="tytul">Skontaktuj się ze mną</h2>
+                <p>
+                    Jeśli masz pytania, szukasz konkretnych informacji lub chcesz 
+                    omówić współpracę, nie wahaj się do mnie napisać. Czekam 
+                    również na Twoje opinie i sugestie, które są dla mnie cenne. 
+                    Wszelkie komentarze i miłe słowa są zawsze mile widziane.
+                </p>
+                <p>Zapraszam do kontaktu!</p>
+                <p class="zakonczenie"><strong>Email:</strong> <a href="mailto:kontakt@kontakt.com">kontakt@kontakt.com</a></p>
+            </div>
+            <img class="obraz" src="img/szczur1.png" alt="Autor strony">
+        </div>
+        <div class="info" id="info2">
+            <img class="obraz" src="img/szynszyl1.png" alt="Autor strony">
+            <div class="tekst" id="tekst2">
+                <h2 class="tytul">Formularz kontaktowy</h2>
+                <p>Możesz także skorzystać z formularzu kontaktowego.</p>
+                <form id="formularz-kontaktowy">
+                    <label for="imie">Twoję imię:</label>
+                    <input type="text" id="imie" name="imie" required 
+                    pattern="[a-zA-ZąęóćłńśźżĄĘÓĆŁŃŚŹŻ]+" title="Dozwolone są tylko litery alfabetu.">
+                    <label for="email">Twój email:</label>
+                    <input type="email" id="email" name="email" required 
+                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Email musi zawierać: co najmniej jedną literę, potem znak @, następnie co najmniej jedną literę, kropkę i ponownie co najmniej jedną literę.">
+                    <label for="sprawa">Sprawa kontaktu:</label>
+                    <select id="sprawa" name="sprawa" required>
+                        <option value="" disabled selected>Wybierz opcję</option>
+                        <option value="wspolpraca">Współpraca</option>
+                        <option value="zakup_produktu">Zakup produktu</option>
+                        <option value="zwrot_kosztow">Zwrot kosztów</option>
+                        <option value="pomoc">Pomoc</option>
+                        <option value="inne">Inne</option>
+                    </select>
+                    <label for="wiadomosc">Treść wiadomości:</label>
+                    <textarea id="wiadomosc" name="wiadomosc" placeholder="Cześć. Piszę do ciebie w sprawie..." required></textarea>
+                    <button id="wyslij" type="submit">Wyślij</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+Style guide: Kontakt.Wszystkie sekcje
+*/
+.kontakt-flex 
+{
+    box-sizing: border-box;
+    margin: 0 3em;
+    height: auto;
+    width: calc(100% - 6em);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*
+Klasa .info
+
+Klasa, która obejmuje poszczególne sekcje na stronie.
+
+Markup:     
+    <div class="info" id="info1">
+        <div class="tekst" id="tekst1">
+            <h2 class="tytul">Skontaktuj się ze mną</h2>
+            <p>
+                Jeśli masz pytania, szukasz konkretnych informacji lub chcesz 
+                omówić współpracę, nie wahaj się do mnie napisać. Czekam 
+                również na Twoje opinie i sugestie, które są dla mnie cenne. 
+                Wszelkie komentarze i miłe słowa są zawsze mile widziane.
+            </p>
+            <p>Zapraszam do kontaktu!</p>
+            <p class="zakonczenie"><strong>Email:</strong> <a href="mailto:kontakt@kontakt.com">kontakt@kontakt.com</a></p>
+        </div>
+        <img class="obraz" src="img/szczur1.png" alt="Autor strony">
+    </div>
+    <div class="info" id="info2">
+        <img class="obraz" src="img/szynszyl1.png" alt="Autor strony">
+        <div class="tekst" id="tekst2">
+            <h2 class="tytul">Formularz kontaktowy</h2>
+            <p>Możesz także skorzystać z formularzu kontaktowego.</p>
+            <form id="formularz-kontaktowy">
+                <label for="imie">Twoję imię:</label>
+                <input type="text" id="imie" name="imie" required 
+                pattern="[a-zA-ZąęóćłńśźżĄĘÓĆŁŃŚŹŻ]+" title="Dozwolone są tylko litery alfabetu.">
+                <label for="email">Twój email:</label>
+                <input type="email" id="email" name="email" required 
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Email musi zawierać: co najmniej jedną literę, potem znak @, następnie co najmniej jedną literę, kropkę i ponownie co najmniej jedną literę.">
+                <label for="sprawa">Sprawa kontaktu:</label>
+                <select id="sprawa" name="sprawa" required>
+                    <option value="" disabled selected>Wybierz opcję</option>
+                    <option value="wspolpraca">Współpraca</option>
+                    <option value="zakup_produktu">Zakup produktu</option>
+                    <option value="zwrot_kosztow">Zwrot kosztów</option>
+                    <option value="pomoc">Pomoc</option>
+                    <option value="inne">Inne</option>
+                </select>
+                <label for="wiadomosc">Treść wiadomości:</label>
+                <textarea id="wiadomosc" name="wiadomosc" placeholder="Cześć. Piszę do ciebie w sprawie..." required></textarea>
+                <button id="wyslij" type="submit">Wyślij</button>
+            </form>
+        </div>
+    </div>
+
+Style guide: Kontakt.Wszystkie sekcje.Sekcja
+*/
+.info 
+{
+    height: auto;
+    width: calc(75% + 12.5em);
+}
+
+#info1, #info2
+{
+    margin: 3em 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#info1 
+{
+    align-self: flex-end;
+}
+
+#info2 
+{
+    align-self: flex-start;
+}
+
+.info > *
+{
+    flex: 1;
+    flex-basis: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+/*
+Klasa .obraz
+
+Klasa, która obejmuje obrazy w poszczególnych sekcjach.
+
+Markup:     
+    <img class="obraz" src="img/szczur1.png" alt="Autor strony">
+    <img class="obraz" src="img/szynszyl1.png" alt="Autor strony">
+
+Style guide: Kontakt.Wszystkie sekcje.Sekcja.Obraz
+*/
+.info .obraz
+{
+    max-height: 512px;
+    object-fit: contain;
+}
+
+/*
+Klasa .tekst
+
+Klasa, która obejmuje tekst w poszczególnych sekcjach.
+
+Markup:     
+    <div class="tekst" id="tekst1">
+        <h2 class="tytul">Skontaktuj się ze mną</h2>
+        <p>
+            Jeśli masz pytania, szukasz konkretnych informacji lub chcesz 
+            omówić współpracę, nie wahaj się do mnie napisać. Czekam 
+            również na Twoje opinie i sugestie, które są dla mnie cenne. 
+            Wszelkie komentarze i miłe słowa są zawsze mile widziane.
+        </p>
+        <p>Zapraszam do kontaktu!</p>
+        <p class="zakonczenie"><strong>Email:</strong> <a href="mailto:kontakt@kontakt.com">kontakt@kontakt.com</a></p>
+    </div>
+    <div class="tekst" id="tekst2">
+        <h2 class="tytul">Formularz kontaktowy</h2>
+        <p>Możesz także skorzystać z formularzu kontaktowego.</p>
+        <form id="formularz-kontaktowy">
+            <label for="imie">Twoję imię:</label>
+            <input type="text" id="imie" name="imie" required 
+            pattern="[a-zA-ZąęóćłńśźżĄĘÓĆŁŃŚŹŻ]+" title="Dozwolone są tylko litery alfabetu.">
+            <label for="email">Twój email:</label>
+            <input type="email" id="email" name="email" required 
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Email musi zawierać: co najmniej jedną literę, potem znak @, następnie co najmniej jedną literę, kropkę i ponownie co najmniej jedną literę.">
+            <label for="sprawa">Sprawa kontaktu:</label>
+            <select id="sprawa" name="sprawa" required>
+                <option value="" disabled selected>Wybierz opcję</option>
+                <option value="wspolpraca">Współpraca</option>
+                <option value="zakup_produktu">Zakup produktu</option>
+                <option value="zwrot_kosztow">Zwrot kosztów</option>
+                <option value="pomoc">Pomoc</option>
+                <option value="inne">Inne</option>
+            </select>
+            <label for="wiadomosc">Treść wiadomości:</label>
+            <textarea id="wiadomosc" name="wiadomosc" placeholder="Cześć. Piszę do ciebie w sprawie..." required></textarea>
+            <button id="wyslij" type="submit">Wyślij</button>
+        </form>
+    </div>
+
+Style guide: Kontakt.Wszystkie sekcje.Sekcja.Tekst
+*/
+.info .tekst
+{
+    width: 100%;
+    text-align: justify;
+}
+
+.info #tekst1
+{
+    padding-right: 3em;
+}
+
+.info #tekst2
+{
+    padding-left: 3em;
+}
+
+.info .tekst .tytul
+{
+    text-align: start;
+    margin-top: auto;
+    font-size: 2em;
+    color: rgb(30, 0, 255);
+}
+
+.info .tekst .podtytul
+{
+    margin-top: -1em;
+    font-size: 1.5em;
+    color: rgb(30, 0, 0);
+}
+
+.info .tekst p
+{
+    font-size: 1.125em;
+    color: rgb(60, 0, 0);
+}
+
+.info .tekst p a
+{
+    text-decoration: none;
+    padding: 0 0.125em;
+    background-color: rgb(60, 0, 0);;
+    color: white;
+}
+
+.info .tekst .zakonczenie
+{
+    font-size: 1.5em;
+    color: rgb(30, 0, 0);
+}
+
+/*
+Identyfikator #formularz-kontaktowy
+
+Identyfikator, który obejmuje formularz kontaktowy.
+
+Markup:     
+    <form id="formularz-kontaktowy">
+        <label for="imie">Twoję imię:</label>
+        <input type="text" id="imie" name="imie" required 
+        pattern="[a-zA-ZąęóćłńśźżĄĘÓĆŁŃŚŹŻ]+" title="Dozwolone są tylko litery alfabetu.">
+        <label for="email">Twój email:</label>
+        <input type="email" id="email" name="email" required 
+        pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Email musi zawierać: co najmniej jedną literę, potem znak @, następnie co najmniej jedną literę, kropkę i ponownie co najmniej jedną literę.">
+        <label for="sprawa">Sprawa kontaktu:</label>
+        <select id="sprawa" name="sprawa" required>
+            <option value="" disabled selected>Wybierz opcję</option>
+            <option value="wspolpraca">Współpraca</option>
+            <option value="zakup_produktu">Zakup produktu</option>
+            <option value="zwrot_kosztow">Zwrot kosztów</option>
+            <option value="pomoc">Pomoc</option>
+            <option value="inne">Inne</option>
+        </select>
+        <label for="wiadomosc">Treść wiadomości:</label>
+        <textarea id="wiadomosc" name="wiadomosc" placeholder="Cześć. Piszę do ciebie w sprawie..." required></textarea>
+        <button id="wyslij" type="submit">Wyślij</button>
+    </form>
+
+Style guide: Kontakt.Wszystkie sekcje.Sekcja.Tekst.Formularz kontaktowy
+*/
+#formularz-kontaktowy 
+{
+    box-sizing: border-box;
+    padding: 1em;
+    margin: auto;
+    margin-left: 0;
+    border: 0.5em solid rgb(33, 33, 33);
+    border-radius: 2em;
+    color: white;
+    background-color: rgb(77, 77, 77);
+    text-align: start;
+    width: 100%;
+    max-width: 512px;
+}
+
+#formularz-kontaktowy > * 
+{
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0.25em;
+    margin-bottom: 1.5em;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+#formularz-kontaktowy input, #formularz-kontaktowy select, 
+#formularz-kontaktowy textarea, #formularz-kontaktowy button
+{
+    padding: 0 0.5em;
+    height: 3em;
+    border: 0.25em solid rgb(11, 11, 11);
+    border-radius: 1em;
+    color: rgb(60, 0, 0);
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+#formularz-kontaktowy input:focus, #formularz-kontaktowy select:focus, 
+#formularz-kontaktowy textarea:focus
+{
+    background-color: rgba(240, 240, 240, 0.9);
+}
+
+#formularz-kontaktowy #sprawa
+{
+    padding: 0 0.25em;
+}
+
+#formularz-kontaktowy #wiadomosc
+{
+    padding: 0.5em 0.5em;
+    width: 100%;
+    height: 6.25em;
+    resize: none;
+}
+
+#formularz-kontaktowy #wyslij 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.25em;
+    width: 25%;
+    min-width: 5em;
+    height: 48px;
+    background-color: rgb(35, 155, 50);
+    color: white;
+    border: 0.35em solid rgb(0, 50, 15);
+    cursor: pointer;
+    transition: background-color 250ms, font-size 250ms, margin-top 250ms, margin-bottom 250ms;
+    transform-origin: center;
+}
+
+#formularz-kontaktowy #wyslij:hover 
+{
+    margin-top: 3px;
+    margin-bottom: 0.225em;
+    background-color: rgb(30, 125, 45);
+    font-size: 1em;
+}
+
+/*
+Klasa .modal
+
+Klasa, która zawiera kontener, który wyświetla się
+gdy formularz zostanie poprawnie uzupełniony i wysłany.
+
+Markup:     
+    <div id="mojModal" class="modal">
+        <div class="modal-div">
+            <button class="zamknij">&times;</button>
+            <p>Wiadomość została wysłana!</p>
+            <p>Dziękuję za kontakt!</p>
+        </div>
+    </div>
+
+Style guide: Kontakt.Modalny kontener
+*/
+.modal 
+{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 200vw;
+    height: 200vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-div 
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.5em solid rgb(10, 10, 10);
+    border-radius: 3em;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    width: 17em;
+    height: 5em;
+    padding: 0em 1.5em;
+    padding-right: 2.75em;
+}
+
+.zamknij 
+{
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    line-height: 0.5em;
+    font-size: 2.5em;
+    font-weight: bold;
+    float: left;
+    overflow: hidden;
+    transition: transform 300ms ease, color 300ms ease;
+}
+
+.zamknij:hover, .zamknij:focus 
+{
+    color: rgb(235, 200, 150);
+    transform: scale(1.25) translateY(-1px);;
+}
+
+@media screen and (min-width: 897px) and (max-width: 1200px)
+{
+    .info .obraz
+    {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 896px)
+{
+    .info 
+    {
+        width: 100%;
+    }
+
+    #info1, #info2
+    {
+        flex-direction: column;
+        row-gap: 1.5em;
+    }
+
+    .info > *
+    {
+        flex: 1;
+        flex-basis: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info #tekst1, .info #tekst2
+    {
+        padding: 0;
+        order: 0;
+    }
+
+    .info .obraz 
+    {
+        order: 1;
+    }
+
+    #formularz-kontaktowy
+    {
+        margin: auto;
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 624px) /* 608px */
+{
+    .info .tekst .tytul
+    {
+        font-size: 1.5em;
+    }
+
+    .info .tekst .podtytul
+    {
+        font-size: 1.25em;
+    }
+
+    .info .tekst p
+    {
+        font-size: 1em;
+    }
+
+    .info .tekst .zakonczenie
+    {
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 384px)
+{
+    .modal-div 
+    {
+        width: 13em;
+    }
+
+    .zamknij 
+    {
+        right: 12px;
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    .modal-div 
+    {
+        width: 9em;
+        height: 6.25em;
+    }
+
+    .zamknij 
+    {
+        top: 42px;
+        right: 12px;
+    }
+}

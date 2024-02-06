@@ -1,0 +1,611 @@
+/*
+Klasa .section-oferta
+
+Klasa, który obejmuje wszystkie sekcje na stronie.
+
+Markup:     
+    <div class="section-oferta">
+        <div class="tekst">
+            <div>
+                <p class="tytul">
+                    <a href="#" onclick="ustawAktualnySlajd(1, 'slides-1'); return false;">Sesje portretowe <img src="img/ikonaPortret.png" alt="Ikona portretu"></a>
+                </p>
+                <p>
+                    <strong class="opis">Opis:</strong> Sesje portretowe są idealnymi do uwiecznienia wyjątkowych chwil życia, 
+                    takich jak sesje rodzinne, narzeczeńskie, czy indywidualne portrety. 
+                    Są też sposobem na uwiecznienie charakteru i urody modela.
+                </p>
+                <p>
+                    <strong class="cena">Orientacyjna cena:</strong> Sesje portretowe mogą kosztować od 250 do 550 zł, 
+                    w zależności od lokalizacji, czasu i ilości zdjęć.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <p class="tytul">
+                    <a href="#" onclick="ustawAktualnySlajd(2, 'slides-1'); return false;">Sesje ślubne <img src="img/ikonaSlubna.png" alt="Ikona ślubu"></a>
+                </p>
+                <p>
+                    <strong class="opis">Opis:</strong> Sesje ślubne, które utrwalają jedne z najpiękniejszych chwil w życiu muszą być wyjątkowe. 
+                    Fotografowie ślubni dokumentują ceremonię, przyjęcie weselne i inne ważne momenty.
+                </p>
+                <p>
+                    <strong class="cena">Orientacyjna cena:</strong> Sesje ślubne mogą kosztować od 2000 do 6000 zł, w zależności od zakresu usług, 
+                    liczby fotografowanych godzin i dostarczania gotowych zdjęć.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <p class="tytul">
+                    <a href="#" onclick="ustawAktualnySlajd(3, 'slides-1'); return false;">Sesje ewentowe <img src="img/ikonaEwent.png" alt="Ikona ewentu"></a>
+                </p>
+                <p>
+                    <strong class="opis">Opis:</strong> Fotografia ewentowa zawiera dokumentowanie różnych wydarzeń, takich jak konferencje, 
+                    koncerty, urodziny i inne specjalne okazje.
+                </p>
+                <p>
+                    <strong class="cena">Orientacyjna cena:</strong> Cena wachać się może od 500 zł za kilka godzin fotografowania, 
+                    aż do kilku tysięcy złotych w zależności od przebieg, wydarzenia i czasu trwania sesji.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <p class="tytul">
+                    <a href="#" onclick="ustawAktualnySlajd(4, 'slides-1'); return false;">Sesje produktowe <img src="img/ikonaProdukt.png" alt="Ikona produktu"></a>
+                </p>
+                <p>
+                    <strong class="opis">Opis:</strong> Sesje produktów są niezbędne dla firmy, które chcą prezentować swoje produkty w atrakcyjny sposób. 
+                    To także ważna część rynku internetowego.
+                </p>
+                <p>
+                    <strong class="cena">Orientacyjna cena:</strong> Koszt sesji produktowej zależny od liczby produktów i ich funkcji, 
+                    ale może wynosić od 700 zł do 3000 zł i więcej.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <p class="tytul">
+                    <a href="#" onclick="ustawAktualnySlajd(5, 'slides-1'); return false;">Sesje architektoniczne <img src="img/ikonaBudynek.png" alt="Ikona budynku"></a>
+                </p>
+                <p>
+                    <strong class="opis">Opis:</strong> Fotografowie architektoniczni specjalizują się w uwiecznianiu budynków i struktur architektonicznych. 
+                    Ich prace są często pokazywane w prasie, stronach internetowych czy telewizji.
+                </p>
+                <p>
+                    <strong class="cena">Orientacyjna cena:</strong> Sesje architektoniczne, których koszt może wynosić od 800 zł do 3000 zł, w zależności od zakresu projektu.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <p class="tytul">
+                    <a href="#" onclick="ustawAktualnySlajd(6, 'slides-1'); return false;">Sesje krajobrazowe <img src="img/ikonaLas.png" alt="Ikona lasu"></a>
+                </p>
+                <p>
+                    <strong class="opis">Opis:</strong> Fotografowie krajobrazowi specjalizują się w uwiecznianiu przyrody i krajobrazów. 
+                    Gotowe zdjęcia idelanie pasują jako obrazy do domu, pracy czy budynków użyteczności publicznej.
+                </p>
+                <p>
+                    <strong class="cena">Orientacyjna cena:</strong> Sesje krajobrazowe mogą kosztować od 900 zł do 4000 zł. Cena zależy głownie 
+                    od lokalizacji, czasu trwania i ilości zdjęć.
+                </p>
+            </div>
+        </div>
+        <div class="slider-div">
+            <div class="dot-div" id="dot-div-1">
+                <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-1')"></span>
+                <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-1')"></span>
+                <span class="dot" onclick="ustawAktualnySlajd(3, 'slides-1')"></span>
+                <span class="dot" onclick="ustawAktualnySlajd(4, 'slides-1')"></span>
+                <span class="dot" onclick="ustawAktualnySlajd(5, 'slides-1')"></span>
+                <span class="dot" onclick="ustawAktualnySlajd(6, 'slides-1')"></span>
+            </div>
+            <div class="slides-border-container">
+                <div class="slides" id="slides-1">
+                    <div class="div1 slides-div" id="slide-1-1">
+                        <img src="img/sesja1.png" alt="Sesja portretowa">
+                    </div>
+                    <div class="div2 slides-div" id="slide-1-2">
+                        <img src="img/sesja2.png" alt="Sesja ślubna">
+                    </div>
+                    <div class="div3 slides-div" id="slide-1-3">
+                        <img src="img/sesja3.png" alt="Sesja ewentowa">
+                    </div>
+                    <div class="div4 slides-div" id="slide-1-4">
+                        <img src="img/sesja4.png" alt="Sesja produktowa">
+                    </div>
+                    <div class="div5 slides-div" id="slide-1-5">
+                        <img src="img/sesja5.png" alt="Sesja architektoniczna">
+                    </div>
+                    <div class="div6 slides-div" id="slide-1-6">
+                        <img src="img/sesja6.png" alt="Sesja krajobrazowa">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+Style guide: Oferta.Wszystkie sekcje
+*/
+.section-oferta
+{
+    margin: 3em auto;
+    margin-top: 5em;
+    box-sizing: border-box;
+    position: relative;
+    width: calc(100% - 6em);
+    display: flex;
+}
+
+/*
+Klasa .tekst
+
+Klasa, który obejmuje sekcję z tekstem.
+
+Markup:     
+    <div class="tekst">
+        <div>
+            <p class="tytul">
+                <a href="#" onclick="ustawAktualnySlajd(1, 'slides-1'); return false;">Sesje portretowe <img src="img/ikonaPortret.png" alt="Ikona portretu"></a>
+            </p>
+            <p>
+                <strong class="opis">Opis:</strong> Sesje portretowe są idealnymi do uwiecznienia wyjątkowych chwil życia, 
+                takich jak sesje rodzinne, narzeczeńskie, czy indywidualne portrety. 
+                Są też sposobem na uwiecznienie charakteru i urody modela.
+            </p>
+            <p>
+                <strong class="cena">Orientacyjna cena:</strong> Sesje portretowe mogą kosztować od 250 do 550 zł, 
+                w zależności od lokalizacji, czasu i ilości zdjęć.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p class="tytul">
+                <a href="#" onclick="ustawAktualnySlajd(2, 'slides-1'); return false;">Sesje ślubne <img src="img/ikonaSlubna.png" alt="Ikona ślubu"></a>
+            </p>
+            <p>
+                <strong class="opis">Opis:</strong> Sesje ślubne, które utrwalają jedne z najpiękniejszych chwil w życiu muszą być wyjątkowe. 
+                Fotografowie ślubni dokumentują ceremonię, przyjęcie weselne i inne ważne momenty.
+            </p>
+            <p>
+                <strong class="cena">Orientacyjna cena:</strong> Sesje ślubne mogą kosztować od 2000 do 6000 zł, w zależności od zakresu usług, 
+                liczby fotografowanych godzin i dostarczania gotowych zdjęć.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p class="tytul">
+                <a href="#" onclick="ustawAktualnySlajd(3, 'slides-1'); return false;">Sesje ewentowe <img src="img/ikonaEwent.png" alt="Ikona ewentu"></a>
+            </p>
+            <p>
+                <strong class="opis">Opis:</strong> Fotografia ewentowa zawiera dokumentowanie różnych wydarzeń, takich jak konferencje, 
+                koncerty, urodziny i inne specjalne okazje.
+            </p>
+            <p>
+                <strong class="cena">Orientacyjna cena:</strong> Cena wachać się może od 500 zł za kilka godzin fotografowania, 
+                aż do kilku tysięcy złotych w zależności od przebieg, wydarzenia i czasu trwania sesji.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p class="tytul">
+                <a href="#" onclick="ustawAktualnySlajd(4, 'slides-1'); return false;">Sesje produktowe <img src="img/ikonaProdukt.png" alt="Ikona produktu"></a>
+            </p>
+            <p>
+                <strong class="opis">Opis:</strong> Sesje produktów są niezbędne dla firmy, które chcą prezentować swoje produkty w atrakcyjny sposób. 
+                To także ważna część rynku internetowego.
+            </p>
+            <p>
+                <strong class="cena">Orientacyjna cena:</strong> Koszt sesji produktowej zależny od liczby produktów i ich funkcji, 
+                ale może wynosić od 700 zł do 3000 zł i więcej.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p class="tytul">
+                <a href="#" onclick="ustawAktualnySlajd(5, 'slides-1'); return false;">Sesje architektoniczne <img src="img/ikonaBudynek.png" alt="Ikona budynku"></a>
+            </p>
+            <p>
+                <strong class="opis">Opis:</strong> Fotografowie architektoniczni specjalizują się w uwiecznianiu budynków i struktur architektonicznych. 
+                Ich prace są często pokazywane w prasie, stronach internetowych czy telewizji.
+            </p>
+            <p>
+                <strong class="cena">Orientacyjna cena:</strong> Sesje architektoniczne, których koszt może wynosić od 800 zł do 3000 zł, w zależności od zakresu projektu.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p class="tytul">
+                <a href="#" onclick="ustawAktualnySlajd(6, 'slides-1'); return false;">Sesje krajobrazowe <img src="img/ikonaLas.png" alt="Ikona lasu"></a>
+            </p>
+            <p>
+                <strong class="opis">Opis:</strong> Fotografowie krajobrazowi specjalizują się w uwiecznianiu przyrody i krajobrazów. 
+                Gotowe zdjęcia idelanie pasują jako obrazy do domu, pracy czy budynków użyteczności publicznej.
+            </p>
+            <p>
+                <strong class="cena">Orientacyjna cena:</strong> Sesje krajobrazowe mogą kosztować od 900 zł do 4000 zł. Cena zależy głownie 
+                od lokalizacji, czasu trwania i ilości zdjęć.
+            </p>
+        </div>
+    </div>
+
+Style guide: Oferta.Wszystkie sekcje.Sekcja tekst
+*/
+.tekst
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-right: 3em;
+    margin-bottom: -1.25em;
+}
+
+.tekst hr
+{
+    width: calc(100% - 8em);
+    margin-bottom: 1.5em;
+    border: 2.5px solid black;
+    border-radius: 50px;
+}
+
+/*
+Klasa .tekst div
+
+Klasa, który obejmuje kontener z zawartością, w sekcji .tekst.
+
+Markup:     
+    <div>
+        <p class="tytul">
+            <a href="#" onclick="ustawAktualnySlajd(1, 'slides-1'); return false;">Sesje portretowe <img src="img/ikonaPortret.png" alt="Ikona portretu"></a>
+        </p>
+        <p>
+            <strong class="opis">Opis:</strong> Sesje portretowe są idealnymi do uwiecznienia wyjątkowych chwil życia, 
+            takich jak sesje rodzinne, narzeczeńskie, czy indywidualne portrety. 
+            Są też sposobem na uwiecznienie charakteru i urody modela.
+        </p>
+        <p>
+            <strong class="cena">Orientacyjna cena:</strong> Sesje portretowe mogą kosztować od 250 do 550 zł, 
+            w zależności od lokalizacji, czasu i ilości zdjęć.
+        </p>
+    </div>
+    <div>
+        <p class="tytul">
+            <a href="#" onclick="ustawAktualnySlajd(2, 'slides-1'); return false;">Sesje ślubne <img src="img/ikonaSlubna.png" alt="Ikona ślubu"></a>
+        </p>
+        <p>
+            <strong class="opis">Opis:</strong> Sesje ślubne, które utrwalają jedne z najpiękniejszych chwil w życiu muszą być wyjątkowe. 
+            Fotografowie ślubni dokumentują ceremonię, przyjęcie weselne i inne ważne momenty.
+        </p>
+        <p>
+            <strong class="cena">Orientacyjna cena:</strong> Sesje ślubne mogą kosztować od 2000 do 6000 zł, w zależności od zakresu usług, 
+            liczby fotografowanych godzin i dostarczania gotowych zdjęć.
+        </p>
+    </div>
+    <div>
+        <p class="tytul">
+            <a href="#" onclick="ustawAktualnySlajd(3, 'slides-1'); return false;">Sesje ewentowe <img src="img/ikonaEwent.png" alt="Ikona ewentu"></a>
+        </p>
+        <p>
+            <strong class="opis">Opis:</strong> Fotografia ewentowa zawiera dokumentowanie różnych wydarzeń, takich jak konferencje, 
+            koncerty, urodziny i inne specjalne okazje.
+        </p>
+        <p>
+            <strong class="cena">Orientacyjna cena:</strong> Cena wachać się może od 500 zł za kilka godzin fotografowania, 
+            aż do kilku tysięcy złotych w zależności od przebieg, wydarzenia i czasu trwania sesji.
+        </p>
+    </div>
+    <div>
+        <p class="tytul">
+            <a href="#" onclick="ustawAktualnySlajd(4, 'slides-1'); return false;">Sesje produktowe <img src="img/ikonaProdukt.png" alt="Ikona produktu"></a>
+        </p>
+        <p>
+            <strong class="opis">Opis:</strong> Sesje produktów są niezbędne dla firmy, które chcą prezentować swoje produkty w atrakcyjny sposób. 
+            To także ważna część rynku internetowego.
+        </p>
+        <p>
+            <strong class="cena">Orientacyjna cena:</strong> Koszt sesji produktowej zależny od liczby produktów i ich funkcji, 
+            ale może wynosić od 700 zł do 3000 zł i więcej.
+        </p>
+    </div>
+    <div>
+        <p class="tytul">
+            <a href="#" onclick="ustawAktualnySlajd(5, 'slides-1'); return false;">Sesje architektoniczne <img src="img/ikonaBudynek.png" alt="Ikona budynku"></a>
+        </p>
+        <p>
+            <strong class="opis">Opis:</strong> Fotografowie architektoniczni specjalizują się w uwiecznianiu budynków i struktur architektonicznych. 
+            Ich prace są często pokazywane w prasie, stronach internetowych czy telewizji.
+        </p>
+        <p>
+            <strong class="cena">Orientacyjna cena:</strong> Sesje architektoniczne, których koszt może wynosić od 800 zł do 3000 zł, w zależności od zakresu projektu.
+        </p>
+    </div>
+    <div>
+        <p class="tytul">
+            <a href="#" onclick="ustawAktualnySlajd(6, 'slides-1'); return false;">Sesje krajobrazowe <img src="img/ikonaLas.png" alt="Ikona lasu"></a>
+        </p>
+        <p>
+            <strong class="opis">Opis:</strong> Fotografowie krajobrazowi specjalizują się w uwiecznianiu przyrody i krajobrazów. 
+            Gotowe zdjęcia idelanie pasują jako obrazy do domu, pracy czy budynków użyteczności publicznej.
+        </p>
+        <p>
+            <strong class="cena">Orientacyjna cena:</strong> Sesje krajobrazowe mogą kosztować od 900 zł do 4000 zł. Cena zależy głownie 
+            od lokalizacji, czasu trwania i ilości zdjęć.
+        </p>
+    </div>
+
+Style guide: Oferta.Wszystkie sekcje.Sekcja tekst.Kontener z treścią.
+*/
+.tekst div 
+{
+    display: block;
+    text-align: justify;
+}
+
+.tekst div .tytul
+{
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: rgb(165, 65, 25);
+}
+
+.tekst div .tytul a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.tekst div .tytul img
+{
+    width: 27px;
+    margin-bottom: -4px;
+}
+
+.tekst div .opis, .tekst div .cena
+{
+    color: rgb(75, 35, 10);
+}
+
+.tekst div p
+{
+    margin-top: 0;
+    font-size: 1.125em;
+    color: rgb(110, 50, 15);
+}
+
+.dot-div
+{
+    margin-top: -1em;
+}
+
+.dot-div > *
+{
+    justify-content: center;
+}
+
+/*
+Klasa .slider-div
+
+Klasa, który obejmuje sekcję z animowanymi slidesami w sliderze 
+i z kropkami do nawigacji po sliderze.
+
+Markup:     
+    <div class="slider-div">
+        <div class="dot-div" id="dot-div-1">
+            <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-1')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-1')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(3, 'slides-1')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(4, 'slides-1')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(5, 'slides-1')"></span>
+            <span class="dot" onclick="ustawAktualnySlajd(6, 'slides-1')"></span>
+        </div>
+        <div class="slides-border-container">
+            <div class="slides" id="slides-1">
+                <div class="div1 slides-div" id="slide-1-1">
+                    <img src="img/sesja1.png" alt="Sesja portretowa">
+                </div>
+                <div class="div2 slides-div" id="slide-1-2">
+                    <img src="img/sesja2.png" alt="Sesja ślubna">
+                </div>
+                <div class="div3 slides-div" id="slide-1-3">
+                    <img src="img/sesja3.png" alt="Sesja ewentowa">
+                </div>
+                <div class="div4 slides-div" id="slide-1-4">
+                    <img src="img/sesja4.png" alt="Sesja produktowa">
+                </div>
+                <div class="div5 slides-div" id="slide-1-5">
+                    <img src="img/sesja5.png" alt="Sesja architektoniczna">
+                </div>
+                <div class="div6 slides-div" id="slide-1-6">
+                    <img src="img/sesja6.png" alt="Sesja krajobrazowa">
+                </div>
+            </div>
+        </div>
+    </div>
+
+Style guide: Oferta.Wszystkie sekcje.Sekcja slider.
+*/
+.slider-div
+{
+    width: 100%;
+    height: 100%;
+    min-width: 24em;
+    max-width: calc(512px);
+    margin: 0 auto;
+}
+
+/*
+Klasa .slides-border-container 
+
+Klasa, który obejmuje zestaw tylko slidesów w sliderze.
+
+Markup:     
+    <div class="slides-border-container">
+        <div class="slides" id="slides-1">
+            <div class="div1 slides-div" id="slide-1-1">
+                <img src="img/sesja1.png" alt="Sesja portretowa">
+            </div>
+            <div class="div2 slides-div" id="slide-1-2">
+                <img src="img/sesja2.png" alt="Sesja ślubna">
+            </div>
+            <div class="div3 slides-div" id="slide-1-3">
+                <img src="img/sesja3.png" alt="Sesja ewentowa">
+            </div>
+            <div class="div4 slides-div" id="slide-1-4">
+                <img src="img/sesja4.png" alt="Sesja produktowa">
+            </div>
+            <div class="div5 slides-div" id="slide-1-5">
+                <img src="img/sesja5.png" alt="Sesja architektoniczna">
+            </div>
+            <div class="div6 slides-div" id="slide-1-6">
+                <img src="img/sesja6.png" alt="Sesja krajobrazowa">
+            </div>
+        </div>
+    </div>
+
+Style guide: Oferta.Wszystkie sekcje.Sekcja slider.Slider
+*/
+.slider-div .slides-border-container 
+{
+    overflow: hidden;
+    border-radius: 3em;
+    width: 100%;
+}
+
+.slider-div .slides 
+{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    padding-left: 3px;
+    width: calc(100% - 6px);
+    column-gap: 7em;
+}
+
+/*
+Klasa .slides-div
+
+Klasa, który obejmuje slidesy w sliderze.
+
+Markup:     
+    <div class="div1 slides-div" id="slide-1-1">
+        <img src="img/sesja1.png" alt="Sesja portretowa">
+    </div>
+    <div class="div2 slides-div" id="slide-1-2">
+        <img src="img/sesja2.png" alt="Sesja ślubna">
+    </div>
+    <div class="div3 slides-div" id="slide-1-3">
+        <img src="img/sesja3.png" alt="Sesja ewentowa">
+    </div>
+    <div class="div4 slides-div" id="slide-1-4">
+        <img src="img/sesja4.png" alt="Sesja produktowa">
+    </div>
+    <div class="div5 slides-div" id="slide-1-5">
+        <img src="img/sesja5.png" alt="Sesja architektoniczna">
+    </div>
+    <div class="div6 slides-div" id="slide-1-6">
+        <img src="img/sesja6.png" alt="Sesja krajobrazowa">
+    </div>
+
+Style guide: Oferta.Wszystkie sekcje.Sekcja slider.Slider.Slides
+*/
+.slides-div
+{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    border-radius: 3em;
+    border: 3px solid rgb(33, 33, 33);
+    background-color: rgb(50, 50, 50, 0.35);
+}
+
+.slides-div img
+{
+    width: 100%;
+    max-width: 512px;
+    height: auto;
+    border-radius: 2em;
+    object-fit: contain;
+    flex-shrink: 1;
+}
+
+@media screen and (min-width: 897px) and (max-width: 1056px)
+{
+    .slider-div .slides 
+    {
+        display: grid;
+        grid-template-columns: repeat(3, calc(100% + 6px));
+        column-gap: 7em;
+        row-gap: 1em;
+    }
+
+    .slides-div
+    {
+        width: calc(100% - 6px);
+    }
+}
+
+@media screen and (max-width: 896px)
+{
+    .section-oferta
+    {
+        flex-direction: column;
+    }
+
+    .tekst
+    {
+        margin-right: 0em;
+        margin-bottom: 1.5em;
+    }
+
+    .slider-div
+    {
+        min-width: 8em;
+    }
+}
+
+@media screen and (max-width: 624px)
+{
+    .tekst div .tytul
+    {
+        font-size: 1.5em;
+    }
+
+    .tekst div .tytul img
+    {
+        width: 25px;
+        margin-bottom: -4px;
+    }
+
+    .tekst div p
+    {
+        font-size: 1.0625em;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 384px)
+{
+    .tekst hr
+    {
+        min-width: 10em;
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    .tekst hr
+    {
+        width: 71%;
+        min-width: 6em;
+    }
+}

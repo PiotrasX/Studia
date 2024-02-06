@@ -1,0 +1,1223 @@
+/*
+Identyfikator #zlozona-animacja
+
+Ten identyfikator jest stosowany jako warstwa dla animacji, która obejmuje cały widok ekranu.
+
+Markup:     
+    <div id="zlozona-animacja">
+        <div id="tlo-zlozona-animacja"></div>
+        <div id="aparat-dol"></div>
+        <div id="aparat-lewo"></div>
+        <div id="aparat-prawo"></div>
+        <div id="aparat-gora-lewo-lewo"></div>
+        <div id="aparat-gora-lewo-prawo"></div>
+        <div id="aparat-gora-srodek-lewo"></div>
+        <div id="aparat-gora-srodek-srodek"></div>
+        <div id="aparat-gora-srodek-prawo"></div>
+        <div id="aparat-gora-prawo"></div>
+        <div id="aparat-przycisk"></div>
+        <div id="aparat-lampa-lewo"></div>
+        <div id="aparat-lampa-prawo"></div>
+        <div id="aparat-obiektyw-jeden"></div>
+        <div id="aparat-obiektyw-dwa"></div>
+        <div id="aparat-flesh-jeden"></div>
+        <div id="aparat-flesh-dwa"></div>
+        <div id="animacja-tekst">FotoKaty</div>
+    </div>
+
+Style guide: Złożona animacja.Animacja
+*/
+#zlozona-animacja
+{
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255, 1);
+}
+
+/*
+Klasa .zlozona-animacja-zanikanie
+
+Ta klasa sprawia, że po zakończeniu animacji, cała animacja zanika.
+
+Markup:     
+    <div id="zlozona-animacja" class="zlozona-animacja-zanikanie">
+        <div id="tlo-zlozona-animacja"></div>
+        <div id="aparat-dol"></div>
+        <div id="aparat-lewo"></div>
+        <div id="aparat-prawo"></div>
+        <div id="aparat-gora-lewo-lewo"></div>
+        <div id="aparat-gora-lewo-prawo"></div>
+        <div id="aparat-gora-srodek-lewo"></div>
+        <div id="aparat-gora-srodek-srodek"></div>
+        <div id="aparat-gora-srodek-prawo"></div>
+        <div id="aparat-gora-prawo"></div>
+        <div id="aparat-przycisk"></div>
+        <div id="aparat-lampa-lewo"></div>
+        <div id="aparat-lampa-prawo"></div>
+        <div id="aparat-obiektyw-jeden"></div>
+        <div id="aparat-obiektyw-dwa"></div>
+        <div id="aparat-flesh-jeden"></div>
+        <div id="aparat-flesh-dwa"></div>
+        <div id="animacja-tekst">FotoKaty</div>
+    </div>
+
+Style guide: Złożona animacja.Animacja zanikanie
+*/
+.zlozona-animacja-zanikanie
+{
+    animation: zanikanie 1500ms forwards;
+}
+
+@keyframes zanikanie 
+{
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/*
+Identyfikator #tlo-zlozona-animacja
+
+Ten identyfikator ustawia tło dla animacji.
+
+Markup:     
+    <div id="tlo-zlozona-animacja"></div>
+
+Style guide: Złożona animacja.Animacja tło
+*/
+#tlo-zlozona-animacja
+{
+    align-items: center;
+    position: fixed;
+    min-width: calc(100vw + 4em);
+    min-height: calc(100vh + 4em);
+    background: url('img/jezioro.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(3px);
+    opacity: 0.5;
+    top: -7em;
+    left: -1em;
+    right: -1em;
+    bottom: -1em;
+    z-index: -1;
+}
+
+/*
+Identyfikator #aparat-przycisk
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-przycisk"></div>
+
+Style guide: Złożona animacja.Animacja elementu.1
+*/
+#aparat-przycisk
+{
+    position: fixed;
+    width: 3em;
+    height: 3em;
+    top: calc(30% - 1.5em);
+    left: calc(25% - 1.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatPrzycisk 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatPrzycisk 
+{
+    0%, 20% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(50% - 0.5em);
+        left: calc(50% - 0.5em)
+    }
+    40% 
+    { 
+        width: 3em;
+        height: 3em;
+        top: calc(50% - 1.5em);
+        left: calc(50% - 1.5em);
+    }
+    60% 
+    { 
+        top: calc(30% - 1.5em);
+        left: calc(25% - 1.5em);
+    }
+}
+
+@media screen and (max-width: 896px)
+{
+    #aparat-przycisk
+    {
+        position: fixed;
+        width: 2em;
+        height: 3em;
+        top: calc(30% - 1.5em);
+        left: calc(25% - 1em);
+        background-color: black;
+        border-radius: 2em;
+        animation: animacjaAparatPrzycisk 10s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes animacjaAparatPrzycisk 
+    {
+        0%, 20% 
+        { 
+            width: 1em;
+            height: 1em;
+            top: calc(50% - 0.5em);
+            left: calc(50% - 0.5em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 3em;
+            top: calc(50% - 1.5em);
+            left: calc(50% - 1em);
+        }
+        60% 
+        { 
+            top: calc(30% - 1.5em);
+            left: calc(25% - 1em);
+        }
+    }
+}
+
+/*
+Identyfikator #aparat-gora-lewo-prawo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-gora-lewo-prawo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.2
+*/
+#aparat-gora-lewo-prawo
+{
+    position: fixed;
+    width: calc(16% + 1em);
+    height: 1em;
+    top: calc(30% - 0.5em);
+    left: calc(25% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatGoraLewoPrawo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatGoraLewoPrawo 
+{
+    0%, 60% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(30% - 0.5em);
+        left: calc(25% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    60.01%
+    {
+        background-color: black;
+    }
+    62.17% 
+    { 
+        width: calc(16% + 1em);
+        height: 1em;
+    }
+}
+
+/*
+Identyfikator #aparat-gora-srodek-lewo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-gora-srodek-lewo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.3
+*/
+#aparat-gora-srodek-lewo
+{
+    position: fixed;
+    width: 1em;
+    height: calc(5% + 1em);
+    bottom: calc(70% - 0.5em);
+    left: calc(41% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatGoraSrodekLewo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatGoraSrodekLewo 
+{
+    0%, 62.17% 
+    { 
+        width: 1em;
+        height: 1em;
+        bottom: calc(70% - 0.5em);
+        left: calc(41% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    62.18%
+    {
+        background-color: black;
+    }
+    63.26% 
+    { 
+        width: 1em;
+        height: calc(5% + 1em);
+    }
+}
+
+/*
+Identyfikator #aparat-gora-srodek-srodek
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-gora-srodek-srodek"></div>
+
+Style guide: Złożona animacja.Animacja elementu.4
+*/
+#aparat-gora-srodek-srodek
+{
+    position: fixed;
+    width: calc(18% + 1em);
+    height: 1em;
+    top: calc(25% - 0.5em);
+    left: calc(41% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatGoraSrodekSrodek 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatGoraSrodekSrodek 
+{
+    0%, 63.26% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(25% - 0.5em);
+        left: calc(41% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    63.27%
+    {
+        background-color: black;
+    }
+    67.05% 
+    { 
+        width: calc(18% + 1em);
+        height: 1em;
+    }
+}
+
+/*
+Identyfikator #aparat-gora-srodek-prawo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-gora-srodek-prawo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.5
+*/
+#aparat-gora-srodek-prawo
+{
+    position: fixed;
+    width: 1em;
+    height: calc(5% + 1em);
+    top: calc(25% - 0.5em);
+    left: calc(59% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatGoraSrodekPrawo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatGoraSrodekPrawo
+{
+    0%, 67.05% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(25% - 0.5em);
+        left: calc(59% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    67.06%
+    {
+        background-color: black;
+    }
+    68.14% 
+    { 
+        width: 1em;
+        height: calc(5% + 1em);
+    }
+}
+
+/*
+Identyfikator #aparat-gora-prawo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-gora-prawo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.6
+*/
+#aparat-gora-prawo
+{
+    position: fixed;
+    width: calc(21% + 1em);
+    height: 1em;
+    top: calc(30% - 0.5em);
+    left: calc(59% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatGoraPrawo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatGoraPrawo
+{
+    0%, 68.14% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(30% - 0.5em);
+        left: calc(59% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    68.15%
+    {
+        background-color: black;
+    }
+    71.75% 
+    { 
+        width: calc(21% + 1em);
+        height: 1em;
+    }
+}
+
+/*
+Identyfikator #aparat-prawo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-prawo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.7
+*/
+#aparat-prawo
+{
+    position: fixed;
+    width: 1em;
+    height: calc(40% + 1em);
+    top: calc(30% - 0.5em);
+    left: calc(80% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatPrawo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatPrawo
+{
+    0%, 71.75% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(30% - 0.5em);
+        left: calc(80% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    71.76%
+    {
+        background-color: black;
+    }
+    79.33% 
+    { 
+        width: 1em;
+        height: calc(40% + 1em);
+    }
+}
+
+/*
+Identyfikator #aparat-dol
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-dol"></div>
+
+Style guide: Złożona animacja.Animacja elementu.8
+*/
+#aparat-dol
+{
+    position: fixed;
+    width: calc(60% + 1em);
+    height: 1em;
+    top: calc(70% - 0.5em);
+    right: calc(20% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatDol 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatDol
+{
+    0%, 79.33% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(70% - 0.5em);
+        right: calc(20% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    79.34%
+    {
+        background-color: black;
+    }
+    91.06% 
+    { 
+        width: calc(60% + 1em);
+        height: 1em;
+    }
+}
+
+/*
+Identyfikator #aparat-lewo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-lewo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.9
+*/
+#aparat-lewo
+{
+    position: fixed;
+    width: 1em;
+    height: calc(40% + 1em);
+    bottom: calc(30% - 0.5em);
+    left: calc(20% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatLewo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatLewo
+{
+    0%, 91.06% 
+    { 
+        width: 1em;
+        height: 1em;
+        bottom: calc(30% - 0.5em);
+        left: calc(20% - 0.5em);
+        transform-origin: bottom;
+        background-color: rgb(0, 0, 0, 0);
+    }
+    91.07%
+    {
+        background-color: black;
+    }
+    98.64% 
+    { 
+        width: 1em;
+        height: calc(40% + 1em);
+        transform-origin: top;
+    }
+}
+
+/*
+Identyfikator #aparat-gora-lewo-lewo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-gora-lewo-lewo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.10
+*/
+#aparat-gora-lewo-lewo
+{
+    position: fixed;
+    width: calc(5% + 1em);
+    height: 1em;
+    top: calc(30% - 0.5em);
+    left: calc(20% - 0.5em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatGoraLewoLewo 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatGoraLewoLewo
+{
+    0%, 98.64% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(30% - 0.5em);
+        left: calc(20% - 0.5em);
+        background-color: rgb(0, 0, 0, 0);
+    }
+    98.65%
+    {
+        background-color: black;
+    }
+    100% 
+    { 
+        width: calc(5% + 1em);
+        height: 1em;
+    }
+}
+
+/*
+Identyfikator #aparat-lampa-lewo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-lampa-lewo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.11
+*/
+#aparat-lampa-lewo
+{
+    position: fixed;
+    width: 2em;
+    height: 2em;
+    top: calc(35% - 1em);
+    left: calc(37% - 1em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatLampaLewo 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatLampaLewo
+{
+    0%, 20% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(50% - 0.5em);
+        left: calc(50% - 0.5em)
+    }
+    40% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(50% - 1em);
+        left: calc(50% - 1em);
+    }
+    60% 
+    { 
+        top: calc(35% - 1em);
+        left: calc(37% - 1em);
+    }
+}
+
+/*
+Identyfikator #aparat-lampa-prawo
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-lampa-prawo"></div>
+
+Style guide: Złożona animacja.Animacja elementu.12
+*/
+#aparat-lampa-prawo
+{
+    position: fixed;
+    width: 5%;
+    height: 2em;
+    top: calc(35% - 1em);
+    left: calc(63% - 1em);
+    background-color: black;
+    border-radius: 3em;
+    animation: animacjaAparatLampaPrawo 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatLampaPrawo
+{
+    0%, 20% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(50% - 0.5em);
+        left: calc(50% - 0.5em)
+    }
+    40% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(50% - 1em);
+        left: calc(50% - 1em);
+    }
+    60% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(35% - 1em);
+        left: calc(63% - 1em);
+    }
+    73%
+    {
+        width: 5%;
+    }
+}
+
+/*
+Identyfikator #aparat-obiektyw-jeden
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-obiektyw-jeden"></div>
+
+Style guide: Złożona animacja.Animacja elementu.13
+*/
+#aparat-obiektyw-jeden
+{
+    position: fixed;
+    width: 13em;
+    height: 13em;
+    top: calc(50% - 6.5em);
+    left: calc(50% - 6.5em);
+    background-color: black;
+    border-radius: 50%;
+    animation: animacjaAparatObiektywJeden 10s;
+    animation-fill-mode: forwards;
+    mask-image: radial-gradient(circle, transparent 50%, black 30%);
+}
+
+@keyframes animacjaAparatObiektywJeden
+{
+    0%, 20% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(50% - 0.5em);
+        left: calc(50% - 0.5em)
+    }
+    40% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(50% - 1em);
+        left: calc(50% - 1em);
+    }
+    60% 
+    { 
+        width: 13em;
+        height: 13em;
+        top: calc(50% - 6.5em);
+        left: calc(50% - 6.5em);
+    }
+}
+
+/*
+Identyfikator #aparat-obiektyw-dwa
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-obiektyw-dwa"></div>
+
+Style guide: Złożona animacja.Animacja elementu.14
+*/
+#aparat-obiektyw-dwa
+{
+    position: fixed;
+    width: 7em;
+    height: 7em;
+    top: calc(50% - 3.5em);
+    left: calc(50% - 3.5em);
+    background-color: black;
+    border-radius: 50%;
+    animation: animacjaAparatObiektywDwa 10s;
+    animation-fill-mode: forwards;
+    mask-image: radial-gradient(circle, transparent 40%, black 30%);
+}
+
+@keyframes animacjaAparatObiektywDwa
+{
+    0%, 20% 
+    { 
+        width: 1em;
+        height: 1em;
+        top: calc(50% - 0.5em);
+        left: calc(50% - 0.5em)
+    }
+    40% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(50% - 1em);
+        left: calc(50% - 1em);
+    }
+    60% 
+    { 
+        width: 7em;
+        height: 7em;
+        top: calc(50% - 3.5em);
+        left: calc(50% - 3.5em);
+    }
+}
+
+@media screen and (max-width: 896px), screen and (max-height: 640px)
+{
+    #aparat-obiektyw-jeden
+    {
+        position: fixed;
+        width: 9em;
+        height: 9em;
+        top: calc(50% - 4.5em);
+        left: calc(50% - 4.5em);
+        background-color: black;
+        border-radius: 50%;
+        animation: animacjaAparatObiektywJeden 10s;
+        animation-fill-mode: forwards;
+        mask-image: radial-gradient(circle, transparent 50%, black 30%);
+    }
+    
+    @keyframes animacjaAparatObiektywJeden
+    {
+        0%, 20% 
+        { 
+            width: 1em;
+            height: 1em;
+            top: calc(50% - 0.5em);
+            left: calc(50% - 0.5em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 2em;
+            top: calc(50% - 1em);
+            left: calc(50% - 1em);
+        }
+        60% 
+        { 
+            width: 9em;
+            height: 9em;
+            top: calc(50% - 4.5em);
+            left: calc(50% - 4.5em);
+        }
+    }
+
+    #aparat-obiektyw-dwa
+    {
+        position: fixed;
+        width: 5em;
+        height: 5em;
+        top: calc(50% - 2.5em);
+        left: calc(50% - 2.5em);
+        background-color: black;
+        border-radius: 50%;
+        animation: animacjaAparatObiektywDwa 10s;
+        animation-fill-mode: forwards;
+        mask-image: radial-gradient(circle, transparent 40%, black 30%);
+    }
+
+    @keyframes animacjaAparatObiektywDwa
+    {
+        0%, 20% 
+        { 
+            width: 1em;
+            height: 1em;
+            top: calc(50% - 0.5em);
+            left: calc(50% - 0.5em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 2em;
+            top: calc(50% - 1em);
+            left: calc(50% - 1em);
+        }
+        60% 
+        { 
+            width: 5em;
+            height: 5em;
+            top: calc(50% - 2.5em);
+            left: calc(50% - 2.5em);
+        }
+    }
+}
+
+@media screen and (max-width: 352px), screen and (max-height: 480px)
+{
+    #aparat-obiektyw-jeden
+    {
+        position: fixed;
+        width: 7em;
+        height: 7em;
+        top: calc(50% - 3.5em);
+        left: calc(50% - 3.5em);
+        background-color: black;
+        border-radius: 50%;
+        animation: animacjaAparatObiektywJeden 10s;
+        animation-fill-mode: forwards;
+        mask-image: radial-gradient(circle, transparent 50%, black 30%);
+    }
+    
+    @keyframes animacjaAparatObiektywJeden
+    {
+        0%, 20% 
+        { 
+            width: 1em;
+            height: 1em;
+            top: calc(50% - 0.5em);
+            left: calc(50% - 0.5em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 2em;
+            top: calc(50% - 1em);
+            left: calc(50% - 1em);
+        }
+        60% 
+        { 
+            width: 7em;
+            height: 7em;
+            top: calc(50% - 3.5em);
+            left: calc(50% - 3.5em);
+        }
+    }
+
+    #aparat-obiektyw-dwa
+    {
+        position: fixed;
+        width: 4em;
+        height: 4em;
+        top: calc(50% - 2em);
+        left: calc(50% - 2em);
+        background-color: black;
+        border-radius: 50%;
+        animation: animacjaAparatObiektywDwa 10s;
+        animation-fill-mode: forwards;
+        mask-image: radial-gradient(circle, transparent 30%, black 30%);
+    }
+
+    @keyframes animacjaAparatObiektywDwa
+    {
+        0%, 20% 
+        { 
+            width: 1em;
+            height: 1em;
+            top: calc(50% - 0.5em);
+            left: calc(50% - 0.5em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 2em;
+            top: calc(50% - 1em);
+            left: calc(50% - 1em);
+        }
+        60% 
+        { 
+            width: 4em;
+            height: 4em;
+            top: calc(50% - 2em);
+            left: calc(50% - 2em);
+        }
+    }
+}
+
+/*
+Identyfikator #aparat-flesh-jeden
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-flesh-jeden"></div>
+
+Style guide: Złożona animacja.Animacja elementu.15
+*/
+#aparat-flesh-jeden
+{
+    position: fixed;
+    width: 4em;
+    height: 4em;
+    top: calc(43% - 2em);
+    left: calc(53% - 2em);
+    background-color: white;
+    border-radius: 50%;
+    animation: animacjaAparatFleshJeden 10s;
+    animation-fill-mode: forwards;
+    mask-image: radial-gradient(circle, transparent 30%, white 30%);
+}
+
+@keyframes animacjaAparatFleshJeden
+{
+    0%, 20% 
+    { 
+        width: 0em;
+        height: 0em;
+        top: calc(50% - 0em);
+        left: calc(50% - 0em)
+    }
+    40% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(50% - 1em);
+        left: calc(50% - 1em)
+    }
+    60% 
+    { 
+        width: 4em;
+        height: 4em;
+        top: calc(43% - 2em);
+        left: calc(53% - 2em);
+    }
+}
+
+/*
+Identyfikator #aparat-flesh-dwa
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="aparat-flesh-dwa"></div>
+
+Style guide: Złożona animacja.Animacja elementu.16
+*/
+#aparat-flesh-dwa
+{
+    position: fixed;
+    width: 2em;
+    height: 2em;
+    top: calc(53% - 1em);
+    left: calc(46% - 1em);
+    background-color: white;
+    border-radius: 50%;
+    animation: animacjaAparatFleshDwa 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaAparatFleshDwa
+{
+    0%, 20% 
+    { 
+        width: 0em;
+        height: 0em;
+        top: calc(50% - 0em);
+        left: calc(50% - 0em)
+    }
+    40% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(50% - 1em);
+        left: calc(50% - 1em)
+    }
+    60% 
+    { 
+        width: 2em;
+        height: 2em;
+        top: calc(53% - 1em);
+        left: calc(46% - 1em);
+    }
+}
+
+@media screen and (max-width: 896px), screen and (max-height: 640px)
+{
+    #aparat-flesh-jeden
+    {
+        position: fixed;
+        width: 3em;
+        height: 3em;
+        top: calc(43% - 1.5em);
+        left: calc(53% - 1.5em);
+        background-color: white;
+        border-radius: 50%;
+        animation: animacjaAparatFleshJeden 10s;
+        animation-fill-mode: forwards;
+        mask-image: radial-gradient(circle, transparent 30%, white 30%);
+    }
+    
+    @keyframes animacjaAparatFleshJeden
+    {
+        0%, 20% 
+        { 
+            width: 0em;
+            height: 0em;
+            top: calc(50% - 0em);
+            left: calc(50% - 0em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 2em;
+            top: calc(50% - 1em);
+            left: calc(50% - 1em)
+        }
+        60% 
+        { 
+            width: 3em;
+            height: 3em;
+            top: calc(43% - 1.5em);
+            left: calc(53% - 1.5em);
+        }
+    }
+    
+    #aparat-flesh-dwa
+    {
+        position: fixed;
+        width: 1.5em;
+        height: 1.5em;
+        top: calc(53% - 0.75em);
+        left: calc(47% - 0.75em);
+        background-color: white;
+        border-radius: 50%;
+        animation: animacjaAparatFleshDwa 10s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes animacjaAparatFleshDwa
+    {
+        0%, 20% 
+        { 
+            width: 0em;
+            height: 0em;
+            top: calc(50% - 0em);
+            left: calc(50% - 0em)
+        }
+        40% 
+        { 
+            width: 1.5em;
+            height: 1.5em;
+            top: calc(50% - 0.75em);
+            left: calc(50% - 0.75em);
+        }
+        60% 
+        { 
+            width: 1.5em;
+            height: 1.5em;
+            top: calc(53% - 0.75em);
+            left: calc(47% - 0.75em);
+        }
+    }
+}
+
+@media screen and (max-width: 352px), screen and (max-height: 480px)
+{
+    #aparat-flesh-jeden
+    {
+        position: fixed;
+        width: 2.5em;
+        height: 2.5em;
+        top: calc(43% - 1.25em);
+        left: calc(53% - 1.25em);
+        background-color: white;
+        border-radius: 50%;
+        animation: animacjaAparatFleshJeden 10s;
+        animation-fill-mode: forwards;
+        mask-image: radial-gradient(circle, transparent 30%, white 30%);
+    }
+    
+    @keyframes animacjaAparatFleshJeden
+    {
+        0%, 20% 
+        { 
+            width: 0em;
+            height: 0em;
+            top: calc(50% - 0em);
+            left: calc(50% - 0em)
+        }
+        40% 
+        { 
+            width: 2em;
+            height: 2em;
+            top: calc(50% - 1em);
+            left: calc(50% - 1em)
+        }
+        60% 
+        { 
+            width: 2.5em;
+            height: 2.5em;
+            top: calc(43% - 1.25em);
+            left: calc(53% - 1.25em);
+        }
+    }
+}
+
+#aparat-dol,
+#aparat-lewo,
+#aparat-prawo,
+#aparat-gora-lewo-lewo,
+#aparat-gora-lewo-prawo,
+#aparat-gora-srodek-lewo,
+#aparat-gora-srodek-srodek,
+#aparat-gora-srodek-prawo,
+#aparat-gora-prawo,
+#aparat-przycisk,
+#aparat-lampa-lewo,
+#aparat-lampa-prawo,
+#aparat-obiektyw-jeden,
+#aparat-obiektyw-dwa
+{
+    background-color: black;
+}
+
+/*
+Identyfikator #animacja-tekst
+
+Ten identyfikator sprawia, że animuje się konkretny element animacji
+
+Markup:     
+    <div id="animacja-tekst">FotoKaty</div>
+
+Style guide: Złożona animacja.Animacja elementu.17
+*/
+#animacja-tekst
+{
+    position: fixed;
+    width: 100%;
+    top: 5%;
+    font-size: 4em;
+    font-weight: bold;
+    animation: animacjaTekst 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacjaTekst
+{
+    0%, 40%
+    {
+        opacity: 0;
+    }
+    60% 
+    {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 352px)
+{
+    #animacja-tekst
+    {
+        font-size: 3em;
+    }
+}

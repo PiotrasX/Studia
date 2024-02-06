@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylePytaniaOdpowiedzi.css">
+    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="styleZlozonaAnimacja.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Fotokaty</title>
+</head>
+<body>
+    <div id="background"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                <h2>FOTOKATY</h2>
+            </div>
+
+            <div class="menu">
+                <input id="menu-chechbox" type="checkbox">
+                <label class='menu-button-label' for="menu-chechbox">
+                    <span class='menu-button'></span>
+                </label>
+                <ul class="menu-ul">
+                    <li><a class="link" href="index.html">Strona Główna</a></li>
+                    <li><a class="link" href="omnie.html">O mnie</a></li>
+                    <li><a class="link" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="link" href="sklep.html">Sklep</a></li>
+                    <li><a class="link" href="oferta.html">Oferta</a></li>
+                    <li><a class="link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Q&A</h1>
+
+        <div class="relatywna-sekcja" id="relatywna-sekcja">
+            <button class="qia-pytanie" id="qia-pytanie-1">Ile czasu muszę czekać na odpowiedź po wysłaniu zapytania?</button>
+            <div class="qia-odpowiedz" id="qia-odpowiedz-1">
+                <p>Odpowiadamy w ciągu 24 godzin. W przypadku większej liczby zapytań, czas ten może się wydłużyć.</p>
+            </div>
+        
+            <button class="qia-pytanie" id="qia-pytanie-2">Jak długo muszę czekać na gotowe zdjęcia po sesji?</button>
+            <div class="qia-odpowiedz" id="qia-odpowiedz-2">
+                <p>Czas oczekiwania to od dwóch do czterech tygodni. W przypadku skomplikowanych projektów, czas może być dłuższy.</p>
+            </div>
+
+            <button class="qia-pytanie" id="qia-pytanie-3">Czy mogę poprosić o szybsze przetworzenie moich zdjęć?</button>
+            <div class="qia-odpowiedz" id="qia-odpowiedz-3">
+                <p>Tak, oferujemy ekspresowe przetwarzanie za dodatkową opłatą. Skontaktuj się dla szczegółów.</p>
+            </div>
+
+            <button class="qia-pytanie" id="qia-pytanie-4">Jak mogę śledzić postęp mojego zamówienia?</button>
+            <div class="qia-odpowiedz" id="qia-odpowiedz-4">
+                <p>Po złożeniu zamówienia zapewniamy dostęp do systemu śledzenia, gdzie możesz sprawdzić aktualny status zamówienia.</p>
+            </div>
+
+            <button class="qia-pytanie" id="qia-pytanie-5">Czy mogę oczekiwać na rozpatrzenie zwrotu w ciągu 30 dni?</button>
+            <div class="qia-odpowiedz" id="qia-odpowiedz-5">
+                <p>Tak, rozpatrujemy możliwość zwrotu i znajdujemy rozwiązanie w przypadku niezadowolenia, rozpatrzenie może zająć do 30 dni.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacje">
+            <p>&copy; 2024 FOTOKATY</p>
+            <p>Wszelkie prawa zastrzeżone</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/piotrasx" target=”_blank”>
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/piotrasx_/" target=”_blank”>
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@piotrasx" target=”_blank”>
+                <img src="img/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://github.com/PiotrasX" target=”_blank”>
+                <img src="img/github.png" alt="GitHub">
+            </a>
+        </div>
+
+        <div class="qia">
+            <a href="pytaniaOdpowiedzi.html">
+                <img src="img/ikonaPytaniaOdpowiedzi.png" alt="Pytania i odpowiedzi">
+            </a>
+        </div>
+    </footer>
+
+    <script src="ciasteczka.js" type="module"></script>
+    <script src="qiaOdpowiedziAktywne.js"></script>
+    
+</body>
+</html>

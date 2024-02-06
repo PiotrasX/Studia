@@ -1,0 +1,547 @@
+/*
+Identyfikator #element-ozdobny
+
+Identyfikatór, który dodaje na stronę w tle element ozdobny.
+
+Markup:     
+    <div id="element-ozdobny"></div>
+
+Style guide: Strona główna.Element ozdobny
+*/
+#element-ozdobny
+{
+    position: fixed;
+    top: -15vh;
+    left: 11vw;
+    width: 10em;
+    height: 125vh;
+    transform: rotate(15deg);
+    z-index: -11;
+    background-image: url('img/ozdoba1.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    opacity: 0.1;
+}
+
+/*
+Klasa .main-section
+
+Klasa, która zawiera wszystkie sekcje dostępne na stronie.
+
+Markup:     
+    <section class="main-section">
+        <div class="content-div">
+            <div class="info">
+                <div class="tekst" id="tekst1">
+                    <h2 class="tytul">Witaj na mojej stronie FotoKaty!</h2>
+                    <p>
+                        Nazywam się Piotr, jestem fotografem z wieloletnim doświadczeniem i prowadzę tą strone internetową dotyczącą fotografii.
+                        Tworzę poradniki i kursy dotyczące fotografii, nagrywam na YouTube mentorskie i kreatywne filmy, a także szukam nowych 
+                        pomysłów na zdjęcia. Ale co najważniejsze, mam pasję do fotografowania i obróbki zdjęć. Pracując jako fotograf, moim celem 
+                        jest też poświęcenie się zgłebiania nowych dziedzin fotografii. Robię to wszystko, aby móc potem udostępniać Ci bardziej 
+                        dostępne i bardziej wartościowe treści w postaci kursów i moich publikacji.
+                    </p>
+                    <p>
+                        Na tej stronie znajdziesz informacje o mnie, moje portfolio, sklep z kursami i publikacjami mojego autorstwa i wiele więcej.
+                        Polecam zapoznać się też z moją ofertą, a jakbyś miał jakiekolwiek pytania dotyczące mojej pracy, fotografii, lub chciałbyś
+                        podjać się współpracy ze mną, albo miał jeszcze inny powód do skontaktowania się ze mną, to zapraszam serdecznie do kontaktu ze mną.
+                    </p>
+                    <p class="zakonczenie">Zapraszam Cię do Akademii FotoKaty!</p>
+                </div>
+                <img src="img/autor3.png" alt="Autor strony">
+            </div>
+        </div>
+        <div class="api-div">
+            <div class="zegary-data">
+                <div class="czas-spedzony">Całkowity czas spędzony na stronie<div class="czas-spedzony-div">00:00:00</div></div>
+                <div class="data">01.01.2024</div>
+                <div class="zegar">00:00:00</div>
+            </div>
+            <div class="lokalna-pogoda">
+                <span>Pogoda na najbliższe siedem dni</span>
+                <table id="lokalna-pogoda-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Temperatura</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </section>
+
+Style guide: Strona główna.Wszystkie sekcje
+*/
+.main-section
+{
+    box-sizing: border-box;
+    margin: 3em;
+    margin-top: 5em;
+    width: calc(100% - 6em);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+Klasa .content-div
+
+Klasa, która zawiera sekcję z kontentem.
+
+Markup:     
+    <div class="content-div">
+        <div class="info">
+            <div class="tekst" id="tekst1">
+                <h2 class="tytul">Witaj na mojej stronie FotoKaty!</h2>
+                <p>
+                    Nazywam się Piotr, jestem fotografem z wieloletnim doświadczeniem i prowadzę tą strone internetową dotyczącą fotografii.
+                    Tworzę poradniki i kursy dotyczące fotografii, nagrywam na YouTube mentorskie i kreatywne filmy, a także szukam nowych 
+                    pomysłów na zdjęcia. Ale co najważniejsze, mam pasję do fotografowania i obróbki zdjęć. Pracując jako fotograf, moim celem 
+                    jest też poświęcenie się zgłebiania nowych dziedzin fotografii. Robię to wszystko, aby móc potem udostępniać Ci bardziej 
+                    dostępne i bardziej wartościowe treści w postaci kursów i moich publikacji.
+                </p>
+                <p>
+                    Na tej stronie znajdziesz informacje o mnie, moje portfolio, sklep z kursami i publikacjami mojego autorstwa i wiele więcej.
+                    Polecam zapoznać się też z moją ofertą, a jakbyś miał jakiekolwiek pytania dotyczące mojej pracy, fotografii, lub chciałbyś
+                    podjać się współpracy ze mną, albo miał jeszcze inny powód do skontaktowania się ze mną, to zapraszam serdecznie do kontaktu ze mną.
+                </p>
+                <p class="zakonczenie">Zapraszam Cię do Akademii FotoKaty!</p>
+            </div>
+            <img src="img/autor3.png" alt="Autor strony">
+        </div>
+    </div>
+
+Style guide: Strona główna.Wszystkie sekcje.Kontener z treścią
+*/
+.content-div
+{
+    flex-grow: 1;
+    margin-right: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+Klasa .info
+
+Klasa, która zawiera elementy z informacjami.
+
+Markup:     
+    <div class="info">
+        <div class="tekst" id="tekst1">
+            <h2 class="tytul">Witaj na mojej stronie FotoKaty!</h2>
+            <p>
+                Nazywam się Piotr, jestem fotografem z wieloletnim doświadczeniem i prowadzę tą strone internetową dotyczącą fotografii.
+                Tworzę poradniki i kursy dotyczące fotografii, nagrywam na YouTube mentorskie i kreatywne filmy, a także szukam nowych 
+                pomysłów na zdjęcia. Ale co najważniejsze, mam pasję do fotografowania i obróbki zdjęć. Pracując jako fotograf, moim celem 
+                jest też poświęcenie się zgłebiania nowych dziedzin fotografii. Robię to wszystko, aby móc potem udostępniać Ci bardziej 
+                dostępne i bardziej wartościowe treści w postaci kursów i moich publikacji.
+            </p>
+            <p>
+                Na tej stronie znajdziesz informacje o mnie, moje portfolio, sklep z kursami i publikacjami mojego autorstwa i wiele więcej.
+                Polecam zapoznać się też z moją ofertą, a jakbyś miał jakiekolwiek pytania dotyczące mojej pracy, fotografii, lub chciałbyś
+                podjać się współpracy ze mną, albo miał jeszcze inny powód do skontaktowania się ze mną, to zapraszam serdecznie do kontaktu ze mną.
+            </p>
+            <p class="zakonczenie">Zapraszam Cię do Akademii FotoKaty!</p>
+        </div>
+        <img src="img/autor3.png" alt="Autor strony">
+    </div>
+
+Style guide: Strona główna.Wszystkie sekcje.Kontener z treścią.Informacje
+*/
+.info
+{
+    width: 100%;
+    display: flex;
+}
+
+/*
+Klasa .info .tekst
+
+Klasa, która zawiera tekst w elementach z informacjami.
+
+Markup:     
+    <div class="tekst" id="tekst1">
+        <h2 class="tytul">Witaj na mojej stronie FotoKaty!</h2>
+        <p>
+            Nazywam się Piotr, jestem fotografem z wieloletnim doświadczeniem i prowadzę tą strone internetową dotyczącą fotografii.
+            Tworzę poradniki i kursy dotyczące fotografii, nagrywam na YouTube mentorskie i kreatywne filmy, a także szukam nowych 
+            pomysłów na zdjęcia. Ale co najważniejsze, mam pasję do fotografowania i obróbki zdjęć. Pracując jako fotograf, moim celem 
+            jest też poświęcenie się zgłebiania nowych dziedzin fotografii. Robię to wszystko, aby móc potem udostępniać Ci bardziej 
+            dostępne i bardziej wartościowe treści w postaci kursów i moich publikacji.
+        </p>
+        <p>
+            Na tej stronie znajdziesz informacje o mnie, moje portfolio, sklep z kursami i publikacjami mojego autorstwa i wiele więcej.
+            Polecam zapoznać się też z moją ofertą, a jakbyś miał jakiekolwiek pytania dotyczące mojej pracy, fotografii, lub chciałbyś
+            podjać się współpracy ze mną, albo miał jeszcze inny powód do skontaktowania się ze mną, to zapraszam serdecznie do kontaktu ze mną.
+        </p>
+        <p class="zakonczenie">Zapraszam Cię do Akademii FotoKaty!</p>
+    </div>
+
+Style guide: Strona główna.Wszystkie sekcje.Kontener z treścią.Informacje.Tekst
+*/
+.info .tekst
+{
+    padding-top: 0.25em;
+    padding-right: 0.5em;
+    padding-left: 0em;
+    flex-grow: 1;
+    width: 100%;
+    text-align: justify;
+}
+
+/*
+Klasa .info img
+
+Klasa, która zawiera obrazy w elementach z informacjami.
+
+Markup:     
+    <img src="img/autor3.png" alt="Autor strony">
+
+Style guide: Strona główna.Wszystkie sekcje.Kontener z treścią.Informacje.Obraz
+*/
+.info img
+{
+    align-self: flex-start;
+    margin-left: calc(-127px + 1px);
+    width: 512px;
+    height: auto;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 25px, rgba(0, 0, 0, 0.3) 179px, rgba(0, 0, 0, 1) 385px, rgba(0, 0, 0, 1) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 25px, rgba(0, 0, 0, 0.3) 179px, rgba(0, 0, 0, 1) 385px, rgba(0, 0, 0, 1) 100%);
+}
+
+.info .tekst .tytul
+{
+    text-align: start;
+    margin-top: auto;
+    font-size: 2em;
+    color: rgb(115, 0, 255);
+}
+
+.info .tekst p
+{
+    font-size: 1.125em;
+    color: rgb(60, 0, 0);
+}
+
+.info .tekst .zakonczenie
+{
+    font-size: 1.5em;
+    color: rgb(30, 0, 0);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/*
+Klasa .api-div
+
+Klasa, która zawiera sekcję z elementami API.
+
+Markup:     
+    <div class="api-div">
+        <div class="zegary-data">
+            <div class="czas-spedzony">Całkowity czas spędzony na stronie<div class="czas-spedzony-div">00:00:00</div></div>
+            <div class="data">01.01.2024</div>
+            <div class="zegar">00:00:00</div>
+        </div>
+        <div class="lokalna-pogoda">
+            <span>Pogoda na najbliższe siedem dni</span>
+            <table id="lokalna-pogoda-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Temperatura</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+Style guide: Strona główna.Wszystkie sekcje.Api sekcja
+*/
+.api-div
+{
+    margin: auto;
+    width: 13.5em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+Klasa .zegary-data
+
+Klasa, która zawiera w sekcji API zegary oraz datę.
+
+Markup:     
+    <div class="zegary-data">
+        <div class="czas-spedzony">Całkowity czas spędzony na stronie<div class="czas-spedzony-div">00:00:00</div></div>
+        <div class="data">01.01.2024</div>
+        <div class="zegar">00:00:00</div>
+    </div>
+
+Style guide: Strona główna.Wszystkie sekcje.Api sekcja.Zegary i data
+*/
+.api-div .zegary-data
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+Klasa .czas-spedzony
+
+Klasa, która zawiera w sekcji API całkowity czas spędzony na stronie.
+
+Markup:     
+    <div class="czas-spedzony">Całkowity czas spędzony na stronie<div class="czas-spedzony-div">00:00:00</div></div>
+
+Style guide: Strona główna.Wszystkie sekcje.Api sekcja.Zegary i data.Czas spędzony na stronie
+*/
+.czas-spedzony
+{
+    margin-top: 0;
+    max-width: 10em;
+    font-size: 1.25em;
+    color: rgb(200, 10, 200);
+    background-color: rgb(0, 0, 0, 0.7);
+    border: 5px solid black;
+    border-radius: 1em;
+}
+
+.czas-spedzony .czas-spedzony-div
+{
+    font-size: 1.5em;
+}
+
+.data, .zegar
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.25em;
+    color: rgb(35, 150, 255);
+    background-color: rgb(0, 0, 0, 0.7);
+    border: 5px solid black;
+    border-radius: 1em;
+    font-size: 2.5em;
+    font-family: 'Oxygen Mono', monospace;
+    letter-spacing: 1px;
+}
+
+/*
+Klasa .data
+
+Klasa, która zawiera w sekcji API aktualną datę.
+
+Markup:     
+    <div class="data">01.01.2024</div>
+
+Style guide: Strona główna.Wszystkie sekcje.Api sekcja.Zegary i data.Data
+*/
+.data
+{
+    margin-top: 48px;
+    margin-bottom: -5px;
+    font-size: 2em;
+}
+
+/*
+Klasa .lokalna-pogoda
+
+Klasa, która zawiera w API sekcji aktualną pogodę na najbliższe 7 dni.
+
+Markup:     
+    <div class="lokalna-pogoda">
+        <span>Pogoda na najbliższe siedem dni</span>
+        <table id="lokalna-pogoda-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Temperatura</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+Style guide: Strona główna.Wszystkie sekcje.Api sekcja.Pogoda
+*/
+.lokalna-pogoda
+{
+    max-width: 13.5em;
+    margin-top: 48px;
+}
+
+.lokalna-pogoda span
+{
+    font-size: 1.25em;
+}
+
+/*
+Identyfikator #lokalna-pogoda-table
+
+Identyfikator zawierający tabelę, w której znajduje się
+aktualna pogoda na najbliższe 7 dni.
+
+Markup:     
+        <table id="lokalna-pogoda-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Temperatura</th>
+                </tr>
+            </thead>
+        </table>
+
+Style guide: Strona główna.Wszystkie sekcje.Api sekcja.Pogoda.Tabela
+*/
+#lokalna-pogoda-table
+{
+    margin: auto;
+    margin-top: 0.5em;
+    border-collapse: collapse;
+}
+
+#lokalna-pogoda-table th, #lokalna-pogoda-table td 
+{
+    padding: 0.375em 0.5em;
+    text-align: center;
+    border: 2px solid rgb(50, 0, 0);
+}
+
+#lokalna-pogoda-table th 
+{
+    background-color: rgb(35, 135, 235);
+    color: white;
+}
+
+@media screen and (max-width: 896px)
+{
+    .main-section 
+    {
+        flex-direction: column;
+    }
+
+    .content-div, .api-div 
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .info
+    {
+        box-sizing: border-box;
+        padding: 0em 0.5em 0.5em 0.5em;
+        width: 100%;
+        position: relative;
+    }
+
+    .info .tekst
+    {
+        position: relative;
+        padding-right: 0;
+        z-index: 1;
+    }
+
+    .info img
+    {
+        position: absolute;
+        margin-left: 0px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        object-fit: cover;
+        -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+    
+    .api-div 
+    {
+        margin-top: 7em;
+        order: 1;
+        flex-direction: row;
+        column-gap: 3em;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .data
+    {
+        margin-top: 40px;
+    }
+
+    .lokalna-pogoda
+    {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 624px) /* 608px */
+{
+    .info .tekst .tytul
+    {
+        font-size: 1.5em;
+    }
+
+    .info .tekst p
+    {
+        font-size: 1em;
+    }
+
+    .info .tekst .zakonczenie
+    {
+        font-size: 1.25em;
+    }
+
+    .api-div
+    {
+        flex-direction: column;
+        align-items: center;
+        column-gap: 1em;
+    }
+
+    .lokalna-pogoda
+    {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 384px)
+{
+    
+    .czas-spedzony
+    {
+        font-size: 1em;
+    }
+    
+    .czas-spedzony .czas-spedzony-div
+    {
+        font-size: 1.25em;
+    }
+    
+    .data
+    {
+        margin-top: 36px;
+        font-size: 1.5em;
+    }
+
+    .zegar
+    {
+        font-size: 2em;
+    }
+    
+    .lokalna-pogoda span
+    {
+        font-size: 1em;
+    }
+
+    #lokalna-pogoda-table
+    {
+        font-size: 0.85em;
+    }
+}

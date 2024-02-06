@@ -1,0 +1,107 @@
+/*
+Klasa .dot-div
+
+Klasa, która zawiera kontener z kropkami do przewijania
+poszczególnych slajdów.
+
+Markup:     
+    <div class="dot-div" id="dot-div-1">
+        <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-1')"></span>
+        <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-1')"></span>
+        <span class="dot" onclick="ustawAktualnySlajd(3, 'slides-1')"></span>
+        <span class="dot" onclick="ustawAktualnySlajd(4, 'slides-1')"></span>
+        <span class="dot" onclick="ustawAktualnySlajd(5, 'slides-1')"></span>
+        <span class="dot" onclick="ustawAktualnySlajd(6, 'slides-1')"></span>
+    </div>
+
+Style guide: Ciało strony.Kropki do przewijania
+*/
+.dot-div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Klasa .dot
+
+Klasa, która zawiera poszczególne kropki.
+
+Markup:     
+    <span class="dot" onclick="ustawAktualnySlajd(1, 'slides-1')"></span>
+    <span class="dot" onclick="ustawAktualnySlajd(2, 'slides-1')"></span>
+    <span class="dot" onclick="ustawAktualnySlajd(3, 'slides-1')"></span>
+    <span class="dot" onclick="ustawAktualnySlajd(4, 'slides-1')"></span>
+    <span class="dot" onclick="ustawAktualnySlajd(5, 'slides-1')"></span>
+    <span class="dot" onclick="ustawAktualnySlajd(6, 'slides-1')"></span>
+
+Style guide: Ciało strony.Kropki do przewijania.Kropka
+*/
+.dot-div .dot
+{
+    display: inline-flex;
+    margin: 1em 0.5em;
+    cursor: pointer;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: rgb(125, 125, 125);
+    border-radius: 50%;
+    transition: background-color 300ms ease;
+}
+
+.dot-div .dot::before
+{
+    position: relative;
+    top: -0.25em;
+    content: "•";
+    font-size: 2.5em;
+    margin: 0;
+    color: white;
+    transition: color 300ms ease;
+    pointer-events: none;
+}
+
+.dot-div .dot:hover 
+{
+    background-color: rgb(75, 75, 75);
+}
+
+.dot-div .dot:hover::before
+{
+    color: red;
+}
+
+.dot-div .dot.aktywny 
+{
+    background-color: black;
+    color: rgb(200, 0, 0);
+}
+
+.dot-div .dot.aktywny::before 
+{
+    color: rgb(200, 0, 0);
+}
+
+@media screen and (min-width: 321px) and (max-width: 384px)
+{
+    .dot-div .dot
+    {
+        margin: 1em 0.25em;
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    .dot-div .dot
+    {
+        margin: 1em 0.2em;
+        height: 1.25em;
+        width: 1.25em;
+    }
+
+    .dot-div .dot::before
+    {
+        font-size: 2em;
+    }
+}

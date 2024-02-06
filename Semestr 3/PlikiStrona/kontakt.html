@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleKontakt.css">
+    <link rel="stylesheet" href="styleHeaderFooter.css">
+    <link rel="stylesheet" href="styleZlozonaAnimacja.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Fotokaty</title>
+</head>
+<body>
+    <div id="background"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                <h2>FOTOKATY</h2>
+            </div>
+
+            <div class="menu">
+                <input id="menu-chechbox" type="checkbox">
+                <label class='menu-button-label' for="menu-chechbox">
+                    <span class='menu-button'></span>
+                </label>
+                <ul class="menu-ul">
+                    <li><a class="link" href="index.html">Strona Główna</a></li>
+                    <li><a class="link" href="omnie.html">O mnie</a></li>
+                    <li><a class="link" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="link" href="sklep.html">Sklep</a></li>
+                    <li><a class="link" href="oferta.html">Oferta</a></li>
+                    <li><a class="link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Kontakt</h1>
+
+        <section class="kontakt-flex">
+            <div class="info" id="info1">
+                <div class="tekst" id="tekst1">
+                    <h2 class="tytul">Skontaktuj się ze mną</h2>
+                    <p>
+                        Jeśli masz pytania, szukasz konkretnych informacji lub chcesz 
+                        omówić współpracę, nie wahaj się do mnie napisać. Czekam 
+                        również na Twoje opinie i sugestie, które są dla mnie cenne. 
+                        Wszelkie komentarze i miłe słowa są zawsze mile widziane.
+                    </p>
+                    <p>Zapraszam do kontaktu!</p>
+                    <p class="zakonczenie"><strong>Email:</strong> <a href="mailto:kontakt@kontakt.com">kontakt@kontakt.com</a></p>
+                </div>
+                <img class="obraz" src="img/szczur1.png" alt="Autor strony">
+            </div>
+
+            <div class="info" id="info2">
+                <img class="obraz" src="img/szynszyl1.png" alt="Autor strony">
+                <div class="tekst" id="tekst2">
+                    <h2 class="tytul">Formularz kontaktowy</h2>
+                    <p>Możesz także skorzystać z formularzu kontaktowego.</p>
+                    <form id="formularz-kontaktowy">
+                        <label for="imie">Twoję imię:</label>
+                        <input type="text" id="imie" name="imie" required 
+                        pattern="[a-zA-ZąęóćłńśźżĄĘÓĆŁŃŚŹŻ]+" title="Dozwolone są tylko litery alfabetu.">
+        
+                        <label for="email">Twój email:</label>
+                        <input type="email" id="email" name="email" required 
+                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Email musi zawierać: co najmniej jedną literę, potem znak @, następnie co najmniej jedną literę, kropkę i ponownie co najmniej jedną literę.">
+        
+                        <label for="sprawa">Sprawa kontaktu:</label>
+                        <select id="sprawa" name="sprawa" required>
+                            <option value="" disabled selected>Wybierz opcję</option>
+                            <option value="wspolpraca">Współpraca</option>
+                            <option value="zakup_produktu">Zakup produktu</option>
+                            <option value="zwrot_kosztow">Zwrot kosztów</option>
+                            <option value="pomoc">Pomoc</option>
+                            <option value="inne">Inne</option>
+                        </select>
+
+                        <label for="wiadomosc">Treść wiadomości:</label>
+                        <textarea id="wiadomosc" name="wiadomosc" placeholder="Cześć. Piszę do ciebie w sprawie..." required></textarea>
+        
+                        <button id="wyslij" type="submit">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div id="mojModal" class="modal">
+            <div class="modal-div">
+                <button class="zamknij">&times;</button>
+                <p>Wiadomość została wysłana!</p>
+                <p>Dziękuję za kontakt!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacje">
+            <p>&copy; 2024 FOTOKATY</p>
+            <p>Wszelkie prawa zastrzeżone</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/piotrasx" target=”_blank”>
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/piotrasx_/" target=”_blank”>
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@piotrasx" target=”_blank”>
+                <img src="img/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://github.com/PiotrasX" target=”_blank”>
+                <img src="img/github.png" alt="GitHub">
+            </a>
+        </div>
+
+        <div class="qia">
+            <a href="pytaniaOdpowiedzi.html">
+                <img src="img/ikonaPytaniaOdpowiedzi.png" alt="Pytania i odpowiedzi">
+            </a>
+        </div>
+    </footer>
+
+    <script src="kontaktFormLocalStorage.js"></script>
+    <script src="czasNaStronieDataZegar.js"></script>
+    <script src="ciasteczka.js" type="module"></script>
+
+</body>
+</html>
